@@ -35,11 +35,19 @@
 }
 
 @media (max-width: 768px) {
-  /* Mobile Navbar Hamburger Menu Styling */
   .mobileNav {
+    position: relative;
     display: block;
   }
-  /* End Mobile Navbar Hamburger Menu Styling */
+
+  .mobileNavList {
+    position: absolute;
+    right: 0px;
+    border-radius: 5%;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #fefdfa;
+  }
 
   .navList {
     display: none;
