@@ -2,11 +2,18 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { useState } from "react";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
 
 export default function Layout({ children, home }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -27,7 +34,26 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <h1 className={utilStyles.headingLg}>{name}</h1>
-            <nav>
+            <nav className={styles.navBar}>
+              <ul className={styles.navList}>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
+              </ul>
+            </nav>
+            <nav className={styles.mobileNav}>
               <ul>
                 <li>
                   <a href="#about">About</a>

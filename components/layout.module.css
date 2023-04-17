@@ -1,16 +1,47 @@
 .container {
-  max-width: 36rem;
-  padding: 0 1rem;
-  margin: 3rem auto 6rem;
+  max-width: 50rem;
+  padding: 2rem 3rem;
+  margin: 0 auto 0;
 }
 
 .header {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+  color: #91cedb;
+}
+
+.navBar {
+  width: 50%;
+}
+
+.navList {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navList a {
   color: #91cedb;
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.mobileNav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  /* Mobile Navbar Hamburger Menu Styling */
+  .mobileNav {
+    display: block;
+  }
+  /* End Mobile Navbar Hamburger Menu Styling */
+
+  .navList {
+    display: none;
+  }
 }

@@ -24,7 +24,10 @@ export default function Home({ allPostsData }) {
         <h2 id="about" className={utilStyles.headingLg}>
           About
         </h2>
-        <p>Hello, I'm Emma.</p>
+        <p>
+          I am a junior web developer with experience primarily in frontend and
+          an interest in learning backend and other technologies.
+        </p>
       </section>
       <section>
         <h2 id="skills" className={utilStyles.headingLg}>
