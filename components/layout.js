@@ -22,7 +22,6 @@ export default function Layout({ children, home }) {
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         {home ? (
@@ -30,11 +29,21 @@ export default function Layout({ children, home }) {
             <h1 className={utilStyles.headingLg}>{name}</h1>
             <nav>
               <ul>
-                <li>About</li>
-                <li>Skills</li>
-                <li>Portfolio</li>
-                <li>Blog</li>
-                <li>Contact</li>
+                <li>
+                  <a href="#about">About</a>
+                </li>
+                <li>
+                  <a href="#skills">Skills</a>
+                </li>
+                <li>
+                  <a href="#portfolio">Portfolio</a>
+                </li>
+                <li>
+                  <a href="#blog">Blog</a>
+                </li>
+                <li>
+                  <a href="#contact">Contact</a>
+                </li>
               </ul>
             </nav>
           </>

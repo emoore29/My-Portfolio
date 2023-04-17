@@ -21,7 +21,18 @@ export default function Home({ allPostsData }) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
+        <h2 id="about" className={utilStyles.headingLg}>
+          About
+        </h2>
         <p>Hello, I'm Emma.</p>
+      </section>
+      <section>
+        <h2 id="skills" className={utilStyles.headingLg}>
+          Skills
+        </h2>
+      </section>
+      <section>
+        <h2 className={utilStyles.headingLg}>Portfolio</h2>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
@@ -36,6 +47,9 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
+      </section>
+      <section>
+        <h2 className={utilStyles.headingLg}>Contact</h2>
       </section>
     </Layout>
   );
