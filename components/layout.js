@@ -35,7 +35,7 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <h1 className={utilStyles.headingLg}>{name}</h1>
+            <h1 className={utilStyles.headingXl}>{name}</h1>
             <nav className={styles.navBar}>
               <ul className={styles.navList}>
                 <li>
