@@ -1,5 +1,6 @@
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 export default function Portfolio() {
   return (
@@ -8,10 +9,30 @@ export default function Portfolio() {
         Portfolio
       </h2>
       <div className={styles.portfolioGrid}>
-        <div>test 1</div>
-        <div>test 2</div>
-        <div>test 3</div>
-        <div>test 4</div>
+        <div className={styles.projectContainer}>
+          <div className={styles.projectImageParent}>
+            <Image
+              src="/images/dp-portfolio-screenshot.jpg" // Route of the image file
+              fill
+              className={`${utilStyles.objectContain} ${styles.projectImage}`}
+              alt="Art Portfolio"
+            />
+          </div>
+          <p>Art Portfolio</p>
+          <p>A six-page static website built with HTML, CSS, and JS.</p>
+        </div>
+        <div className={styles.projectContainer}>
+          <div id="project-image" className={styles.projectImageParent}>
+            <Image
+              src="/images/pomodoro-screenshot.jpg" // Route of the image file
+              fill
+              className={utilStyles.objectContain}
+              alt="Pomodoro Timer"
+            />
+          </div>
+          <p>Pomodoro Timer</p>
+          <p>A minimal, customisable timer.</p>
+        </div>
       </div>
     </section>
   );
