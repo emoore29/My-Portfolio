@@ -25,7 +25,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={`${utilStyles.headingMd} ${styles.aboutContainer}`}>
+      <section className={styles.aboutContainer}>
         <h2
           id="about"
           className={`${utilStyles.headingMd} ${styles.aboutHeading}`}
@@ -62,7 +62,6 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
       <Portfolio />
-      <Blog allPostsData={allPostsData} />
       <section>
         <h2 id="contact" className={utilStyles.headingMd}>
           Contact

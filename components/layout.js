@@ -49,19 +49,19 @@ export default function Layout({ children, home }) {
             <nav className={styles.navBar}>
               <ul className={styles.navList}>
                 <li>
-                  <a href="#about">About</a>
+                  <a href="/#about">About</a>
                 </li>
                 <li>
-                  <a href="#skills">Skills</a>
+                  <a href="/#skills">Skills</a>
                 </li>
                 <li>
-                  <a href="#portfolio">Portfolio</a>
+                  <a href="/#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <a href="#blog">Blog</a>
+                  <Link href="/blog">Blog</Link>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <a href="/#contact">Contact</a>
                 </li>
               </ul>
             </nav>
@@ -80,27 +80,27 @@ export default function Layout({ children, home }) {
                 <nav className={styles.mobileNavList}>
                   <ul>
                     <li>
-                      <a onClick={toggleMenu} href="#about">
+                      <a onClick={toggleMenu} href="/#about">
                         About
                       </a>
                     </li>
                     <li>
-                      <a onClick={toggleMenu} href="#skills">
+                      <a onClick={toggleMenu} href="/#skills">
                         Skills
                       </a>
                     </li>
                     <li>
-                      <a onClick={toggleMenu} href="#portfolio">
+                      <a onClick={toggleMenu} href="/#portfolio">
                         Portfolio
                       </a>
                     </li>
                     <li>
-                      <a onClick={toggleMenu} href="#blog">
+                      <Link onClick={toggleMenu} href="/blog">
                         Blog
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a onClick={toggleMenu} href="#contact">
+                      <a onClick={toggleMenu} href="/#contact">
                         Contact
                       </a>
                     </li>
@@ -122,7 +122,7 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/blog">← Back to blog</Link>
         </div>
       )}
     </div>

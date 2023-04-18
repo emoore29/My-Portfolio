@@ -7,9 +7,10 @@
 
 .aboutContainer {
   display: grid;
-  grid-template-columns: 75% auto;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: auto 25%;
+  grid-template-rows: auto auto;
   column-gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .aboutHeading {
@@ -38,6 +39,10 @@
 @media (max-width: 600px) {
   .aboutProfileImg {
     display: none;
+  }
+
+  .aboutContainer {
+    grid-template-columns: auto;
   }
 }
 
