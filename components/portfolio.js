@@ -4,7 +4,7 @@ import styles from "../styles/Home.module.css";
 export default function Portfolio() {
   return (
     <section>
-      <h2 id="portfolio" className={utilStyles.headingLg}>
+      <h2 id="portfolio" className={utilStyles.headingMd}>
         Portfolio
       </h2>
       <div className={styles.portfolioGrid}>

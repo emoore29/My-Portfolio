@@ -28,6 +28,8 @@
 .headingMd {
   font-size: 1.2rem;
   line-height: 1.5;
+  font-weight: 400;
+  color: #116a5f;
 }
 
 .borderCircle {

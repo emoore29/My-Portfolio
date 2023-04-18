@@ -28,7 +28,7 @@ export default function Home({ allPostsData }) {
       <section className={`${utilStyles.headingMd} ${styles.aboutContainer}`}>
         <h2
           id="about"
-          className={`${utilStyles.headingLg} ${styles.aboutHeading}`}
+          className={`${utilStyles.headingMd} ${styles.aboutHeading}`}
         >
           About
         </h2>
@@ -46,7 +46,7 @@ export default function Home({ allPostsData }) {
         />
       </section>
       <section>
-        <h2 id="skills" className={utilStyles.headingLg}>
+        <h2 id="skills" className={utilStyles.headingMd}>
           Skills
         </h2>
         <ul className={styles.skillList}>
@@ -62,24 +62,9 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
       <Portfolio />
-      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <p onClick={() => console.log(allPostsData)}>test</p>
-      <Blog /> */}
+      <Blog allPostsData={allPostsData} />
       <section>
-        <h2 id="contact" className={utilStyles.headingLg}>
+        <h2 id="contact" className={utilStyles.headingMd}>
           Contact
         </h2>
       </section>
