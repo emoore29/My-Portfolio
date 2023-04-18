@@ -1,3 +1,7 @@
+.fontLora {
+  font-family: "Lora", serif;
+}
+
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -10,8 +14,7 @@
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 600;
-  letter-spacing: -0.05rem;
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
 }
 
 .headingLg {
@@ -19,7 +22,7 @@
   line-height: 1.4;
   font-weight: 400;
   margin: 1rem 0;
-  color: #c27bb3;
+  color: #116a5f;
 }
 
 .headingMd {
@@ -51,4 +54,8 @@
 
 .lightText {
   color: #666;
+}
+
+.italic {
+  font-style: italic;
 }

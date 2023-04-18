@@ -4,9 +4,11 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import Blog from "./blog";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
+
   return {
     props: {
       allPostsData,
@@ -25,8 +27,9 @@ export default function Home({ allPostsData }) {
           About
         </h2>
         <p>
-          I am a junior web developer with experience primarily in frontend and
-          an interest in learning backend and other technologies.
+          I am a junior web developer with experience primarily in frontend
+          React, and an interest in UI/UX, backend integration, and learning
+          other technologies.
         </p>
       </section>
       <section>
@@ -37,7 +40,7 @@ export default function Home({ allPostsData }) {
       <section>
         <h2 className={utilStyles.headingLg}>Portfolio</h2>
       </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      {/* <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -51,6 +54,8 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <p onClick={() => console.log(allPostsData)}>test</p>
+      <Blog /> */}
       <section>
         <h2 className={utilStyles.headingLg}>Contact</h2>
       </section>

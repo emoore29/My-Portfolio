@@ -35,7 +35,17 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <h1 className={utilStyles.headingXl}>{name}</h1>
+            <h1
+              className={`${utilStyles.headingXl} ${utilStyles.fontLora} ${styles.name}`}
+            >
+              {name}
+            </h1>
+            <p
+              className={`${utilStyles.fontLora} ${utilStyles.italic} ${styles.title}`}
+            >
+              web developer
+            </p>
+
             <nav className={styles.navBar}>
               <ul className={styles.navList}>
                 <li>
@@ -70,19 +80,29 @@ export default function Layout({ children, home }) {
                 <nav className={styles.mobileNavList}>
                   <ul>
                     <li>
-                      <a href="#about">About</a>
+                      <a onClick={toggleMenu} href="#about">
+                        About
+                      </a>
                     </li>
                     <li>
-                      <a href="#skills">Skills</a>
+                      <a onClick={toggleMenu} href="#skills">
+                        Skills
+                      </a>
                     </li>
                     <li>
-                      <a href="#portfolio">Portfolio</a>
+                      <a onClick={toggleMenu} href="#portfolio">
+                        Portfolio
+                      </a>
                     </li>
                     <li>
-                      <a href="#blog">Blog</a>
+                      <a onClick={toggleMenu} href="#blog">
+                        Blog
+                      </a>
                     </li>
                     <li>
-                      <a href="#contact">Contact</a>
+                      <a onClick={toggleMenu} href="#contact">
+                        Contact
+                      </a>
                     </li>
                   </ul>
                 </nav>
