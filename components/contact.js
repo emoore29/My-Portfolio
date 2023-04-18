@@ -1,4 +1,5 @@
 import { useForm, ValidationError } from "@formspree/react";
+import utilStyles from "../styles/utils.module.css";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
@@ -12,6 +13,9 @@ export default function Contact() {
 
   return (
     <>
+      <h2 id="contact" className={utilStyles.headingMd}>
+        Contact
+      </h2>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <label htmlFor="name">Name: </label>
