@@ -33,6 +33,19 @@ export default function Portfolio() {
           <p>Pomodoro Timer</p>
           <p>A minimal, customisable timer.</p>
         </div>
+
+        <div className={styles.projectContainer}>
+          <div id="project-image" className={styles.projectImageParent}>
+            <Image
+              src="/images/manuscript-app-screenshot.jpg" // Route of the image file
+              fill
+              className={utilStyles.objectContain}
+              alt="Statistics App"
+            />
+          </div>
+          <p>Freelance Work Tracker</p>
+          <p>A MERN App designed to keep record of freelance earnings.</p>
+        </div>
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export default function Home({ allPostsData }) {
           className={`${utilStyles.borderCircle} ${styles.aboutProfileImg}`}
         />
       </section>
-      <section>
+      <section className={styles.skillsContainer}>
         <h2 id="skills" className={utilStyles.headingMd}>
           Skills
         </h2>
