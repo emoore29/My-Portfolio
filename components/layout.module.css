@@ -8,10 +8,10 @@
 
 .header {
   display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   color: #116a5f;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   margin-top: 2rem;
 }
 

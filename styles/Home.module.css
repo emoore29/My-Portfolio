@@ -1,4 +1,47 @@
-.container {
+.skillList {
+  columns: 2;
+  column-gap: 2rem;
+  list-style-position: inside;
+}
+
+.aboutContainer {
+  display: grid;
+  grid-template-columns: 75% auto;
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 3rem;
+}
+
+.aboutHeading {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+}
+
+.aboutContent {
+  grid-column: 1 / 1;
+  grid-row: 2 / 3;
+}
+
+.aboutProfileImg {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  align-self: end;
+  justify-self: center;
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+@media (max-width: 600px) {
+  .aboutProfileImg {
+    display: none;
+  }
+}
+
+/* Old styles from Next.js tutorial */
+/* .container {
   min-height: 100vh;
   padding: 0 0.5rem;
   display: flex;
@@ -88,4 +131,4 @@
     width: 100%;
     flex-direction: column;
   }
-}
+} */
