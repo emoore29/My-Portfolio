@@ -15,10 +15,11 @@
 }
 
 .headingLg {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   line-height: 1.4;
+  font-weight: 400;
   margin: 1rem 0;
-  color: #91cedb;
+  color: #c27bb3;
 }
 
 .headingMd {

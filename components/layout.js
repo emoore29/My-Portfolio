@@ -62,6 +62,8 @@ export default function Layout({ children, home }) {
                   priority
                   src={menuIcon}
                   alt="Menu button"
+                  width="35"
+                  height="35"
                 />
               </button>
               {isOpen && (

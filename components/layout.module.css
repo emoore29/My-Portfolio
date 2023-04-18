@@ -9,7 +9,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: #91cedb;
+  color: #c27bb3;
 }
 
 .navBar {
@@ -23,7 +23,7 @@
 }
 
 .navList a {
-  color: #91cedb;
+  color: #c27bb3;
 }
 
 .backToHome {
@@ -44,8 +44,9 @@
     position: absolute;
     right: 0px;
     border-radius: 5%;
-    border: 1px solid black;
-    padding: 10px;
+    -webkit-box-shadow: 2px 2px 8px 1px rgba(194, 123, 179, 0.53);
+    box-shadow: 2px 2px 8px 1px rgba(194, 123, 179, 0.53);
+    padding: 20px;
     background-color: #fefdfa;
   }
 
