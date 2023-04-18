@@ -37,6 +37,9 @@
 }
 
 /* PORTFOLIO SECTION */
+.portfolioContainer {
+  margin-bottom: 3rem;
+}
 .portfolioGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

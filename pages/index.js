@@ -8,6 +8,7 @@ import Link from "next/link";
 import Date from "../components/date";
 import Blog from "./blog";
 import Portfolio from "../components/portfolio";
+import Contact from "../components/contact";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -63,9 +64,7 @@ export default function Home({ allPostsData }) {
       </section>
       <Portfolio />
       <section>
-        <h2 id="contact" className={utilStyles.headingMd}>
-          Contact
-        </h2>
+        <Contact />
       </section>
     </Layout>
   );

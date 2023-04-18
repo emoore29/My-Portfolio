@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Portfolio() {
   return (
-    <section>
+    <section className={styles.portfolioContainer}>
       <h2 id="portfolio" className={utilStyles.headingMd}>
         Portfolio
       </h2>
