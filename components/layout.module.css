@@ -55,6 +55,10 @@
   justify-self: end;
 }
 
+.mobileNav button {
+  border-radius: 15%;
+}
+
 @media (max-width: 768px) {
   .mobileNav {
     position: relative;

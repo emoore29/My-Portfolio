@@ -46,7 +46,11 @@ export default function Contact() {
             errors={state.errors}
           />
         </fieldset>
-        <button type="submit" disabled={state.submitting}>
+        <button
+          type="submit"
+          disabled={state.submitting}
+          className={styles.contactSubmitBtn}
+        >
           Submit
         </button>
       </form>

@@ -82,20 +82,32 @@
   padding: 2rem;
 }
 
+.contactForm fieldset {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 .contactForm label {
   display: inline-block;
   font-size: 14px;
-  width: 5rem;
+  width: 10%;
 }
 
 .contactForm input,
 .contactForm textarea {
   border: none;
-  width: 20rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  flex-grow: 1;
 }
 
 .contactForm textarea {
   height: 5rem;
+}
+
+.contactSubmitBtn {
+  width: 100%;
 }
 
 /* MEDIA QUERIES */
@@ -113,5 +125,16 @@
 
   .aboutContainer {
     grid-template-columns: auto;
+  }
+
+  .contactForm fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contactForm input,
+  .contactForm textarea {
+    width: 100%;
   }
 }
