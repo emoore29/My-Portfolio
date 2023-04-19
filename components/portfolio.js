@@ -7,6 +7,21 @@ import HoverBlur from "./hoverBlur";
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
 
+  const projectLinks = {
+    artPortfolio: {
+      github: "https://github.com/AthenasCode",
+      live: "https://donnapriceart.com/",
+    },
+    pomodoroTimer: {
+      github: "https://github.com/AthenasCode/Pomodoro",
+      live: "https://athenascode.github.io/Pomodoro/",
+    },
+    mernApp: {
+      github: "https://github.com/AthenasCode/Expenses-Chart-Component",
+      live: "https://athenascode.github.io/Expenses-Chart-Component/",
+    },
+  };
+
   return (
     <section className={styles.portfolioContainer}>
       <h2 id="portfolio" className={utilStyles.headingMd}>
@@ -29,7 +44,10 @@ export default function Portfolio() {
           </div>
           <p>Art Portfolio</p>
           <p>A six-page static website built with HTML, CSS, and JS.</p>
-          <HoverBlur isActive={activeProject === "artPortfolio"} />
+          <HoverBlur
+            isActive={activeProject === "artPortfolio"}
+            links={projectLinks.artPortfolio}
+          />
         </div>
         <div
           id="pomodoroTimer"
@@ -47,7 +65,10 @@ export default function Portfolio() {
           </div>
           <p>Pomodoro Timer</p>
           <p>A minimal, customisable timer.</p>
-          <HoverBlur isActive={activeProject === "pomodoroTimer"} />
+          <HoverBlur
+            isActive={activeProject === "pomodoroTimer"}
+            links={projectLinks.pomodoroTimer}
+          />
         </div>
         <div
           id="mernApp"
@@ -65,7 +86,10 @@ export default function Portfolio() {
           </div>
           <p>Freelance Work Tracker</p>
           <p>A MERN App designed to keep record of freelance earnings.</p>
-          <HoverBlur isActive={activeProject === "mernApp"} />
+          <HoverBlur
+            isActive={activeProject === "mernApp"}
+            links={projectLinks.mernApp}
+          />
         </div>
       </div>
     </section>
