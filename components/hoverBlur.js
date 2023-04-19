@@ -2,17 +2,15 @@ import styles from "../styles/Home.module.css";
 
 // Contains elements that display when mouse enters a portfolio project container
 // Display is default none until mouse enters a project
-export default function HoverBlur({ blurProject }) {
+export default function HoverBlur({ isActive }) {
+  if (!isActive) {
+    return null; // Don't render anything if the hover effect isn't active
+  }
+
   return (
     <>
-      <div
-        style={{ display: blurProject ? "block" : "none" }}
-        className={styles.projectHoverBlur}
-      ></div>
-      <div
-        style={{ display: blurProject ? "flex" : "none" }}
-        className={styles.projectHoverButtonsContainer}
-      >
+      <div className={styles.projectHoverBlur}></div>
+      <div className={styles.projectHoverButtonsContainer}>
         <button>View on Github</button>
         <button>View live</button>
       </div>

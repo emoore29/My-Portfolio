@@ -5,7 +5,7 @@ import { useState } from "react";
 import HoverBlur from "./hoverBlur";
 
 export default function Portfolio() {
-  const [blurProject, setBlurProject] = useState(false);
+  const [activeProject, setActiveProject] = useState(null);
 
   return (
     <section className={styles.portfolioContainer}>
@@ -15,8 +15,8 @@ export default function Portfolio() {
       <div className={styles.portfolioGrid}>
         <div
           id="artPortfolio"
-          onMouseOver={() => setBlurProject(true)}
-          onMouseOut={() => setBlurProject(false)}
+          onMouseOver={() => setActiveProject("artPortfolio")}
+          onMouseOut={() => setActiveProject(null)}
           className={styles.projectContainer}
         >
           <div className={styles.projectImageParent}>
@@ -29,11 +29,12 @@ export default function Portfolio() {
           </div>
           <p>Art Portfolio</p>
           <p>A six-page static website built with HTML, CSS, and JS.</p>
-          <HoverBlur blurProject={blurProject} />
+          <HoverBlur isActive={activeProject === "artPortfolio"} />
         </div>
         <div
-          onMouseOver={() => setBlurProject(true)}
-          onMouseOut={() => setBlurProject(false)}
+          id="pomodoroTimer"
+          onMouseOver={() => setActiveProject("pomodoroTimer")}
+          onMouseOut={() => setActiveProject(null)}
           className={styles.projectContainer}
         >
           <div id="project-image" className={styles.projectImageParent}>
@@ -46,12 +47,12 @@ export default function Portfolio() {
           </div>
           <p>Pomodoro Timer</p>
           <p>A minimal, customisable timer.</p>
-          <HoverBlur blurProject={blurProject} />
+          <HoverBlur isActive={activeProject === "pomodoroTimer"} />
         </div>
-
         <div
-          onMouseOver={() => setBlurProject(true)}
-          onMouseOut={() => setBlurProject(false)}
+          id="mernApp"
+          onMouseOver={() => setActiveProject("mernApp")}
+          onMouseOut={() => setActiveProject(null)}
           className={styles.projectContainer}
         >
           <div id="project-image" className={styles.projectImageParent}>
@@ -64,7 +65,7 @@ export default function Portfolio() {
           </div>
           <p>Freelance Work Tracker</p>
           <p>A MERN App designed to keep record of freelance earnings.</p>
-          <HoverBlur blurProject={blurProject} />
+          <HoverBlur isActive={activeProject === "mernApp"} />
         </div>
       </div>
     </section>
