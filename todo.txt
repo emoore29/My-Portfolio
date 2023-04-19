@@ -11,3 +11,4 @@ check responsiveness
 write original notes/first note
 polish MERN app for inclusion on website (use FEM projects until ready)
 DRY code 
+night mode
