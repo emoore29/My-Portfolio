@@ -4,7 +4,7 @@
   grid-template-columns: auto 25%;
   grid-template-rows: auto auto;
   column-gap: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .aboutHeading {
@@ -26,33 +26,34 @@
 
 /* SKILL SECTION */
 .skillsContainer {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 
 .skillList {
   columns: 2;
   column-gap: 2rem;
   list-style-position: inside;
-  list-style-type: circle;
+  list-style-type: disc;
+  font-size: 16px;
 }
 
 /* PORTFOLIO SECTION */
 .portfolioContainer {
-  margin-bottom: 3rem;
+  margin-bottom: 6rem;
 }
 .portfolioGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 5px;
-  border-radius: 9999px;
-  background-color: rgba(17, 106, 95, 0.1); /* add a background color */
-  padding: 10px; /* increase padding to make the container larger */
+  gap: 1rem;
+  border-radius: 99px;
+  background-color: rgba(17, 106, 95, 0.1);
+  padding: 10px;
 }
 
 .projectContainer {
   /* border: 1px solid black; */
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   overflow: hidden;
   background-color: #f5f5f5;
   -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
@@ -68,6 +69,33 @@
   width: 100%;
   aspect-ratio: 16 /9;
   /* height: 12rem; */
+}
+
+/* CONTACT FORM */
+.contactContainer {
+  margin-bottom: 6rem;
+}
+
+.contactForm {
+  background-color: rgba(17, 106, 95, 0.1);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.contactForm label {
+  display: inline-block;
+  font-size: 14px;
+  width: 5rem;
+}
+
+.contactForm input,
+.contactForm textarea {
+  border: none;
+  width: 20rem;
+}
+
+.contactForm textarea {
+  height: 5rem;
 }
 
 /* MEDIA QUERIES */

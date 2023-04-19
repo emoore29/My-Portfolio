@@ -13,8 +13,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   color: #116a5f;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
 }
 
 /* HEADER NAME AND TITLE/DESCRIPTION */

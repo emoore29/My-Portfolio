@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import Date from "../components/date";
-import Blog from "./blog";
+import Notes from "./notes";
 import Portfolio from "../components/portfolio";
 import Contact from "../components/contact";
 
@@ -34,9 +34,9 @@ export default function Home({ allPostsData }) {
           About
         </h2>
         <p className={styles.aboutContent}>
-          I am a junior web developer with experience primarily in frontend
-          React, and an interest in UI/UX, backend integration, and learning
-          other technologies.
+          A self-taught web developer with experience primarily in frontend
+          React and interests in UI/UX, backend integration, and learning other
+          technologies.
         </p>
         <Image
           src="/images/profile.jpg" // Route of the image file
@@ -46,6 +46,7 @@ export default function Home({ allPostsData }) {
           className={`${utilStyles.borderCircle} ${styles.aboutProfileImg}`}
         />
       </section>
+      <Portfolio />
       <section className={styles.skillsContainer}>
         <h2 id="skills" className={utilStyles.headingMd}>
           Skills
@@ -56,14 +57,12 @@ export default function Home({ allPostsData }) {
           <li>Javascript</li>
           <li>React</li>
           <li>Tailwind</li>
-          <li>Next.js</li>
-          <li>Git/Github</li>
+          <li>Git and Github</li>
           <li>MongoDB</li>
-          <li>Figma</li>
         </ul>
       </section>
-      <Portfolio />
-      <section>
+
+      <section className={styles.contactContainer}>
         <Contact />
       </section>
     </Layout>

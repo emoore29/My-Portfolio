@@ -1,5 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
 import utilStyles from "../styles/utils.module.css";
+import styles from "../styles/Home.module.css";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
@@ -16,10 +17,10 @@ export default function Contact() {
       <h2 id="contact" className={utilStyles.headingMd}>
         Contact
       </h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.contactForm}>
         <fieldset>
           <label htmlFor="name">Name: </label>
-          <input type="text" id="name" />
+          <input type="text" id="name" placeholder="Jane Smith" />
         </fieldset>
         <fieldset>
           <label htmlFor="email">Email: </label>
@@ -27,17 +28,17 @@ export default function Contact() {
             id="email"
             name="email"
             type="email"
-            className="border w-full"
+            placeholder="janesmith@gmail.com"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </fieldset>
         <fieldset>
           <label htmlFor="message">Message: </label>
           <textarea
-            className="border w-full"
             type="text"
             name="message"
             id="message"
+            placeholder="Type your message here and I will get back to you!"
           />
           <ValidationError
             prefix="Message"

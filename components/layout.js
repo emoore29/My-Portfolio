@@ -52,13 +52,14 @@ export default function Layout({ children, home }) {
                   <a href="/#about">About</a>
                 </li>
                 <li>
-                  <a href="/#skills">Skills</a>
-                </li>
-                <li>
                   <a href="/#portfolio">Portfolio</a>
                 </li>
                 <li>
-                  <Link href="/blog">Blog</Link>
+                  <a href="/#skills">Skills</a>
+                </li>
+
+                <li>
+                  <Link href="/notes">Notes</Link>
                 </li>
                 <li>
                   <a href="/#contact">Contact</a>
@@ -85,18 +86,19 @@ export default function Layout({ children, home }) {
                       </a>
                     </li>
                     <li>
-                      <a onClick={toggleMenu} href="/#skills">
-                        Skills
-                      </a>
-                    </li>
-                    <li>
                       <a onClick={toggleMenu} href="/#portfolio">
                         Portfolio
                       </a>
                     </li>
                     <li>
+                      <a onClick={toggleMenu} href="/#skills">
+                        Skills
+                      </a>
+                    </li>
+
+                    <li>
                       <Link onClick={toggleMenu} href="/blog">
-                        Blog
+                        Notes
                       </Link>
                     </li>
                     <li>
