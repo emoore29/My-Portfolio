@@ -16,9 +16,13 @@ export default function Portfolio() {
       github: "https://github.com/AthenasCode/Pomodoro",
       live: "https://athenascode.github.io/Pomodoro/",
     },
-    mernApp: {
-      github: "https://github.com/AthenasCode/Expenses-Chart-Component",
-      live: "https://athenascode.github.io/Expenses-Chart-Component/",
+    ratingsComponent: {
+      github: "https://github.com/AthenasCode/Interactive-Rating-Component",
+      live: "https://athenascode.github.io/Interactive-Rating-Component/",
+    },
+    cardDetails: {
+      github: "https://github.com/AthenasCode/Interactive-Card-Details-Form",
+      live: "https://athenascode.github.io/Interactive-Card-Details-Form/",
     },
   };
 
@@ -50,6 +54,27 @@ export default function Portfolio() {
           />
         </div>
         <div
+          id="cardDetails"
+          onMouseOver={() => setActiveProject("cardDetails")}
+          onMouseOut={() => setActiveProject(null)}
+          className={styles.projectContainer}
+        >
+          <div id="project-image" className={styles.projectImageParent}>
+            <Image
+              src="/images/interactive-card-details-screenshot.jpg"
+              fill
+              className={utilStyles.objectContain}
+              alt="Interactive Card Details"
+            />
+          </div>
+          <p>Interactive Card Details Form</p>
+          <p>A form that displays card details as the user types.</p>
+          <HoverBlur
+            isActive={activeProject === "cardDetails"}
+            links={projectLinks.cardDetails}
+          />
+        </div>
+        <div
           id="pomodoroTimer"
           onMouseOver={() => setActiveProject("pomodoroTimer")}
           onMouseOut={() => setActiveProject(null)}
@@ -57,7 +82,7 @@ export default function Portfolio() {
         >
           <div id="project-image" className={styles.projectImageParent}>
             <Image
-              src="/images/pomodoro-screenshot.jpg"
+              src="/images/pomo-screenshot.jpg"
               fill
               className={utilStyles.objectContain}
               alt="Pomodoro Timer"
@@ -71,24 +96,24 @@ export default function Portfolio() {
           />
         </div>
         <div
-          id="mernApp"
-          onMouseOver={() => setActiveProject("mernApp")}
+          id="ratingsComponent"
+          onMouseOver={() => setActiveProject("ratingsComponent")}
           onMouseOut={() => setActiveProject(null)}
           className={styles.projectContainer}
         >
           <div id="project-image" className={styles.projectImageParent}>
             <Image
-              src="/images/manuscript-app-screenshot.jpg"
+              src="/images/interactive-rating-component-screenshot.jpg"
               fill
               className={utilStyles.objectContain}
-              alt="Statistics App"
+              alt="Interactive Rating Component"
             />
           </div>
-          <p>Freelance Work Tracker</p>
-          <p>A MERN App designed to keep record of freelance earnings.</p>
+          <p>Interactive Rating Component</p>
+          <p>A small interactive component.</p>
           <HoverBlur
-            isActive={activeProject === "mernApp"}
-            links={projectLinks.mernApp}
+            isActive={activeProject === "ratingsComponent"}
+            links={projectLinks.ratingsComponent}
           />
         </div>
       </div>

@@ -27,6 +27,14 @@
   grid-row: 2 / 3;
 }
 
+.blogHeader {
+  display: flex;
+
+  color: #116a5f;
+  margin-bottom: 5rem;
+  margin-top: 4rem;
+}
+
 /* NAVBAR */
 .navBar {
   grid-row: 1 / 3;
@@ -57,6 +65,12 @@
 
 .mobileNav button {
   border-radius: 15%;
+}
+
+/* BACK BUTTON */
+.backBtn {
+  margin-top: 6rem;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {

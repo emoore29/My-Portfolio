@@ -32,7 +32,7 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={styles.header}>
+      <header className={home ? `${styles.header}` : `${styles.blogHeader}`}>
         {home ? (
           <>
             <h1
@@ -113,7 +113,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <h2 className={utilStyles.headingLg}>
+            <h2 className={`${utilStyles.headingXl} ${utilStyles.fontLora}`}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
               </Link>
@@ -123,8 +123,8 @@ export default function Layout({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
-          <Link href="/blog">← Back to blog</Link>
+        <div className={`${styles.backToHome} ${styles.backBtn}`}>
+          <Link href="/">← Back to home</Link>
         </div>
       )}
     </div>

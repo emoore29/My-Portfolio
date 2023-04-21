@@ -15,7 +15,7 @@ export async function getStaticProps() {
 
 export default function Notes({ allPostsData }) {
   return (
-    <Layout home>
+    <Layout>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Notes</h2>
         <ul className={utilStyles.list}>
@@ -29,9 +29,6 @@ export default function Notes({ allPostsData }) {
             </li>
           ))}
         </ul>
-        <div>
-          <Link href="/">← Back to home</Link>
-        </div>
       </section>
     </Layout>
   );

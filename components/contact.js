@@ -6,7 +6,7 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
   if (state.succeeded) {
     return (
-      <p className="text-sm my-7">
+      <p className={styles.formThankYou}>
         Thanks for your message! I will get back to you as soon as I can.
       </p>
     );
@@ -38,6 +38,7 @@ export default function Contact() {
             type="text"
             name="message"
             id="message"
+            className={styles.formMessage}
             placeholder="Type your message here and I will get back to you!"
           />
           <ValidationError

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 /* ABOUT SECTION */
 .aboutContainer {
   display: grid;
@@ -129,6 +130,7 @@
   margin-bottom: 0.5rem;
   padding: 0.5rem;
   flex-grow: 1;
+  border-radius: 5px;
 }
 
 .contactForm textarea {
@@ -137,6 +139,53 @@
 
 .contactSubmitBtn {
   width: 100%;
+  background-color: rgba(17, 106, 95, 0.1);
+  font-size: 14px;
+  border-radius: 5px;
+}
+
+.formMessage::-webkit-input-placeholder {
+  /* WebKit-based browsers like Chrome and Safari */
+  font-family: "Lora", sans-serif;
+  font-style: italic;
+}
+.formMessage::-moz-placeholder {
+  /* Firefox */
+  font-family: "Lora", sans-serif;
+  font-style: italic;
+}
+.formMessage:-ms-input-placeholder {
+  /* Microsoft Edge */
+  font-family: "Lora", sans-serif;
+  font-style: italic;
+}
+.formMessage::placeholder {
+  /* Modern browsers */
+  font-family: "Lora", sans-serif;
+  font-style: italic;
+}
+
+.formThankYou {
+  font-size: 14px;
+  font-family: Lora, serif;
+  font-style: italic;
+  text-align: center;
+}
+
+/* BLOG STYLING */
+
+.blogTitleAndDate {
+  margin: 1rem 0;
+}
+
+.notes {
+  font-size: 16px;
+  font-family: "Lora", serif;
+}
+
+.notes ul {
+  margin: 1rem 0;
+  list-style-position: inside;
 }
 
 /* MEDIA QUERIES */
