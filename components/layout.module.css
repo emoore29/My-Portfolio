@@ -29,7 +29,6 @@
 
 .blogHeader {
   display: flex;
-
   color: #116a5f;
   margin-bottom: 5rem;
   margin-top: 4rem;
@@ -65,6 +64,23 @@
 
 .mobileNav button {
   border-radius: 15%;
+}
+
+/* FOOTER */
+
+.socialsFooter {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(245, 245, 245, 0.8);
+  padding: 1rem;
+}
+
+.socialsImg {
+  margin: 5px;
 }
 
 @media (max-width: 768px) {

@@ -74,7 +74,7 @@ export default function Portfolio() {
             />
           </div>
           <p className={`${styles.projectTitle}`}>
-            Interactive Card Details Form | Tailwind, Vite, React
+            Interactive Card Details Form | Tailwind, React
           </p>
           <p
             className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}

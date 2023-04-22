@@ -122,6 +122,35 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
+      {home && (
+        <footer className={styles.socialsFooter}>
+          <div id="github">
+            <a target="_blank" href="https://github.com/AthenasCode">
+              <Image
+                className={styles.socialsImg}
+                src="/images/github-mark.png"
+                height={40}
+                width={40}
+                alt="Github icon"
+              />
+            </a>
+          </div>
+          <a
+            href="https://www.linkedin.com/in/emma-moore-063608b0/"
+            target="_blank"
+          >
+            <div id="linkedin">
+              <Image
+                className={styles.socialsImg}
+                src="/images/LI-In-Bug.png"
+                height={40}
+                width={44}
+                alt="Linkedin icon"
+              />
+            </div>
+          </a>
+        </footer>
+      )}
     </div>
   );
 }

@@ -1,7 +1,4 @@
-style project descriptions & include technologies used
 add profile image
-add socials buttons (github & linkedin)
-add back to top button
 check accessibility - buttons focus outline, etc.
 check responsiveness
 write original notes/first note
