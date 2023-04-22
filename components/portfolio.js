@@ -46,8 +46,14 @@ export default function Portfolio() {
               alt="Art Portfolio"
             />
           </div>
-          <p>Art Portfolio</p>
-          <p>A six-page static website built with HTML, CSS, and JS.</p>
+          <p className={`${styles.projectTitle}`}>
+            Art Portfolio | HTML, CSS, JS
+          </p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            A six-page static website.
+          </p>
           <HoverBlur
             isActive={activeProject === "artPortfolio"}
             links={projectLinks.artPortfolio}
@@ -67,8 +73,14 @@ export default function Portfolio() {
               alt="Interactive Card Details"
             />
           </div>
-          <p>Interactive Card Details Form</p>
-          <p>A form that displays card details as the user types.</p>
+          <p className={`${styles.projectTitle}`}>
+            Interactive Card Details Form | Tailwind, Vite, React
+          </p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            A form that displays card details as the user types.
+          </p>
           <HoverBlur
             isActive={activeProject === "cardDetails"}
             links={projectLinks.cardDetails}
@@ -88,8 +100,12 @@ export default function Portfolio() {
               alt="Pomodoro Timer"
             />
           </div>
-          <p>Pomodoro Timer</p>
-          <p>A minimal, customisable timer.</p>
+          <p className={`${styles.projectTitle}`}>Pomodoro Timer | React</p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            A minimal, customisable timer.
+          </p>
           <HoverBlur
             isActive={activeProject === "pomodoroTimer"}
             links={projectLinks.pomodoroTimer}
@@ -109,8 +125,14 @@ export default function Portfolio() {
               alt="Interactive Rating Component"
             />
           </div>
-          <p>Interactive Rating Component</p>
-          <p>A small interactive component.</p>
+          <p className={`${styles.projectTitle}`}>
+            Interactive Rating Component | Tailwind, Vite, React
+          </p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            A small interactive component.
+          </p>
           <HoverBlur
             isActive={activeProject === "ratingsComponent"}
             links={projectLinks.ratingsComponent}

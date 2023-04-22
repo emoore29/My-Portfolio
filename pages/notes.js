@@ -3,6 +3,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import Layout, { siteTitle } from "../components/layout";
+import styles from "../styles/Home.module.css";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -30,6 +31,9 @@ export default function Notes({ allPostsData }) {
           ))}
         </ul>
       </section>
+      <div className={`${styles.backToHome} ${styles.backBtn}`}>
+        <Link href="/">← Back to home</Link>
+      </div>
     </Layout>
   );
 }

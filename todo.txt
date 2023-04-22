@@ -1,6 +1,5 @@
 style project descriptions & include technologies used
 add profile image
-style notes section
 add socials buttons (github & linkedin)
 add back to top button
 check accessibility - buttons focus outline, etc.
@@ -9,5 +8,3 @@ write original notes/first note
 polish MERN app for inclusion on website (use FEM projects until ready)
 DRY code 
 night mode
-check remark alternatives? dodgy styling
-change "back to home" button in blog post page to "back to notes"
