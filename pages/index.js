@@ -61,7 +61,6 @@ export default function Home({ allPostsData }) {
           <li>MongoDB</li>
         </ul>
       </section>
-
       <section className={styles.contactContainer}>
         <Contact />
       </section>

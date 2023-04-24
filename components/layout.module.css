@@ -61,6 +61,10 @@
   justify-self: end;
 }
 
+.mobileNav ul {
+  list-style: none;
+}
+
 .mobileNav button {
   border-radius: 15%;
 }
