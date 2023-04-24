@@ -34,14 +34,14 @@ export default function Home({ allPostsData }) {
           About
         </h2>
         <p className={styles.aboutContent}>
-          A self-taught web developer with experience primarily in frontend
-          React and interests in UI/UX, backend integration, and learning other
+          A junior web developer with experience primarily in frontend React and
+          interests in UI/UX, backend integration, and learning other
           technologies.
         </p>
         <Image
-          src="/images/profile.jpg" // Route of the image file
-          height={130} // Desired size with correct aspect ratio
-          width={130} // Desired size with correct aspect ratio
+          src="/images/profile.jpg"
+          height={130}
+          width={130}
           alt="Your Name"
           className={`${utilStyles.borderCircle} ${styles.aboutProfileImg}`}
         />

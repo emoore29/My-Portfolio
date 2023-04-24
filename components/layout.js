@@ -5,16 +5,23 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 import menuIcon from "../public/images/menu-icon.svg";
+import sunIcon from "../public/images/day-mode.svg";
+import moonIcon from "../public/images/night-mode.svg";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
 
 export default function Layout({ children, home }) {
   const [isOpen, setIsOpen] = useState(false);
+  // const [dayMode, setDayMode] = useState(true);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  // const toggleDayMode = () => {
+  //   setDayMode(!dayMode);
+  // };
 
   return (
     <div className={styles.container}>
@@ -66,6 +73,7 @@ export default function Layout({ children, home }) {
                 </li>
               </ul>
             </nav>
+            {/* Mobile nav button displays <768px */}
             <div className={styles.mobileNav}>
               <button>
                 <Image
@@ -110,6 +118,27 @@ export default function Layout({ children, home }) {
                 </nav>
               )}
             </div>
+            {/* <button className={styles.nightModeToggler}>
+              {dayMode ? (
+                <Image
+                  onClick={toggleDayMode}
+                  priority
+                  src={sunIcon}
+                  alt="Day/night mode toggle"
+                  width="35"
+                  height="35"
+                />
+              ) : (
+                <Image
+                  onClick={toggleDayMode}
+                  priority
+                  src={moonIcon}
+                  alt="Day/night mode toggle"
+                  width="35"
+                  height="35"
+                />
+              )}
+            </button> */}
           </>
         ) : (
           <>
