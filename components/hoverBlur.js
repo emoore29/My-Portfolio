@@ -11,12 +11,12 @@ export default function HoverBlur({ isActive, links }) {
     <>
       <div className={styles.projectHoverBlur}></div>
       <div className={styles.projectHoverButtonsContainer}>
-        <a href={links.github} target="_blank">
+        {links.github && <a href={links.github} target="_blank">
           View on Github
-        </a>
-        <a href={links.live} target="_blank">
+        </a>}
+        {links.live && <a href={links.live} target="_blank">
           View live
-        </a>
+        </a>}
       </div>
     </>
   );

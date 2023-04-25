@@ -1,26 +1,13 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
-import Link from "next/link";
-import Date from "../components/date";
-import Notes from "./notes";
 import Portfolio from "../components/portfolio";
 import Contact from "../components/contact";
 
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
 
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <Layout home>
       <Head>
@@ -38,13 +25,14 @@ export default function Home({ allPostsData }) {
           interests in UI/UX, backend integration, and learning other
           technologies.
         </p>
-        <Image
+        {/* Optional profile image for future */}
+        {/* <Image
           src="/images/profile.jpg"
           height={130}
           width={130}
           alt="Your Name"
           className={`${utilStyles.borderCircle} ${styles.aboutProfileImg}`}
-        />
+        /> */}
       </section>
       <Portfolio />
       <section className={styles.skillsContainer}>

@@ -1,5 +1,5 @@
 import Head from "next/head";
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
 import { useState } from "react";
@@ -12,8 +12,9 @@ const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
 
 export default function Layout({ children, home }) {
+  // children are shown in <main> so whenever components/pages are nested inside <Layout></Layout> they are displayed there (between the header and footer)
   const [isOpen, setIsOpen] = useState(false);
-  // const [dayMode, setDayMode] = useState(true);
+  // const [dayMode, setDayMode] = useState(true); // dark/light mode for future implementation
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -21,15 +22,15 @@ export default function Layout({ children, home }) {
 
   // const toggleDayMode = () => {
   //   setDayMode(!dayMode);
-  // };
+  // }; // dark/light mode for future implementation
 
   return (
     <div className={styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        {/* <link rel="icon" href="/favicon.ico" /> Icon for future addition */}
         <meta
           name="description"
-          content="Emma Moore's web development portfolio."
+          content="Emma Moore's web dev portfolio."
         />
         <meta
           property="og:image"

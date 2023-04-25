@@ -1,4 +1,3 @@
-add profile image
 check accessibility - buttons focus outline, etc.
 check responsiveness
 polish MERN app for inclusion on website (use FEM projects until ready)

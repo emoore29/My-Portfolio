@@ -9,7 +9,7 @@ export default function Portfolio() {
 
   const projectLinks = {
     artPortfolio: {
-      github: "https://github.com/AthenasCode",
+      github: null,
       live: "https://donnapriceart.com/",
     },
     pomodoroTimer: {
@@ -24,6 +24,10 @@ export default function Portfolio() {
       github: "https://github.com/AthenasCode/Interactive-Card-Details-Form",
       live: "https://athenascode.github.io/Interactive-Card-Details-Form/",
     },
+    myPortfolio: {
+      github: "https://github.com/AthenasCode/My-Portfolio",
+      live: null,
+    }
   };
 
   return (
@@ -60,6 +64,58 @@ export default function Portfolio() {
           />
         </div>
         <div
+          id="pomodoroTimer"
+          onMouseOver={() => setActiveProject("pomodoroTimer")}
+          onMouseOut={() => setActiveProject(null)}
+          className={styles.projectContainer}
+        >
+          <div id="project-image" className={styles.projectImageParent}>
+            <Image
+              src="/images/pomo-screenshot.jpg"
+              fill
+              className={utilStyles.objectContain}
+              alt="Pomodoro Timer"
+            />
+          </div>
+          <p className={`${styles.projectTitle}`}>Pomodoro Timer | React</p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            A minimal, customisable timer.
+          </p>
+          <HoverBlur
+            isActive={activeProject === "pomodoroTimer"}
+            links={projectLinks.pomodoroTimer}
+          />
+        </div>
+        <div
+          id="myPortfolio"
+          onMouseOver={() => setActiveProject("myPortfolio")}
+          onMouseOut={() => setActiveProject(null)}
+          className={styles.projectContainer}
+        >
+          <div className={styles.projectImageParent}>
+            <Image
+              src="/images/portfolio-screenshot.jpg"
+              fill
+              className={`${utilStyles.objectContain} ${styles.projectImage}`}
+              alt="My Portfolio Screenshot"
+            />
+          </div>
+          <p className={`${styles.projectTitle}`}>
+            My Portfolio | Next.js, CSS Modules
+          </p>
+          <p
+            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+          >
+            This portfolio.
+          </p>
+          <HoverBlur
+            isActive={activeProject === "myPortfolio"}
+            links={projectLinks.myPortfolio}
+          />
+        </div>
+        <div
           id="cardDetails"
           onMouseOver={() => setActiveProject("cardDetails")}
           onMouseOut={() => setActiveProject(null)}
@@ -86,31 +142,8 @@ export default function Portfolio() {
             links={projectLinks.cardDetails}
           />
         </div>
-        <div
-          id="pomodoroTimer"
-          onMouseOver={() => setActiveProject("pomodoroTimer")}
-          onMouseOut={() => setActiveProject(null)}
-          className={styles.projectContainer}
-        >
-          <div id="project-image" className={styles.projectImageParent}>
-            <Image
-              src="/images/pomo-screenshot.jpg"
-              fill
-              className={utilStyles.objectContain}
-              alt="Pomodoro Timer"
-            />
-          </div>
-          <p className={`${styles.projectTitle}`}>Pomodoro Timer | React</p>
-          <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
-          >
-            A minimal, customisable timer.
-          </p>
-          <HoverBlur
-            isActive={activeProject === "pomodoroTimer"}
-            links={projectLinks.pomodoroTimer}
-          />
-        </div>
+        
+        
         <div
           id="ratingsComponent"
           onMouseOver={() => setActiveProject("ratingsComponent")}
