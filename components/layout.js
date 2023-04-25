@@ -144,7 +144,7 @@ export default function Layout({ children, home }) {
           </>
         ) : (
           <>
-            <h2 className={`${utilStyles.headingXl} ${utilStyles.fontLora}`}>
+            <h2 className={`${utilStyles.headingXl} ${lora.className}`}>
               <Link href="/" className={utilStyles.colorInherit}>
                 {name}
               </Link>
