@@ -6,6 +6,7 @@ import Layout, { siteTitle } from "../components/layout";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 
+
 // Exporting getStaticProps causes Next.js to pre-render the page at build time using the props returned by getStaticProps
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
