@@ -5,6 +5,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "../../styles/Home.module.css";
+import { lora } from "../../styles/fonts"
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -37,7 +38,7 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div
-          className={styles.notes}
+          className={`${styles.notes} ${lora.className}`}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>

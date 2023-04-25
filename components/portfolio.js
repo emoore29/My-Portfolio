@@ -3,6 +3,7 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import HoverBlur from "./hoverBlur";
+import { lora } from "../styles/fonts"
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
@@ -54,7 +55,7 @@ export default function Portfolio() {
             Art Portfolio | HTML, CSS, JS
           </p>
           <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
             A six-page static website.
           </p>
@@ -79,7 +80,7 @@ export default function Portfolio() {
           </div>
           <p className={`${styles.projectTitle}`}>Pomodoro Timer | React</p>
           <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
             A minimal, customisable timer.
           </p>
@@ -106,7 +107,7 @@ export default function Portfolio() {
             My Portfolio | Next.js, CSS Modules
           </p>
           <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
             This portfolio.
           </p>
@@ -133,7 +134,7 @@ export default function Portfolio() {
             Interactive Card Details Form | Tailwind, React
           </p>
           <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
             A form that displays card details as the user types.
           </p>
@@ -162,7 +163,7 @@ export default function Portfolio() {
             Interactive Rating Component | Tailwind, Vite, React
           </p>
           <p
-            className={`${utilStyles.italic} ${utilStyles.fontLora} ${styles.projectDescription}`}
+            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
             A small interactive component.
           </p>

@@ -7,6 +7,7 @@ import Image from "next/image";
 import menuIcon from "../public/images/menu-icon.svg";
 import sunIcon from "../public/images/day-mode.svg";
 import moonIcon from "../public/images/night-mode.svg";
+import { lora } from "../styles/fonts"
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
@@ -44,12 +45,12 @@ export default function Layout({ children, home }) {
         {home ? (
           <>
             <h1
-              className={`${utilStyles.headingXl} ${utilStyles.fontLora} ${styles.name}`}
+              className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
             >
               {name}
             </h1>
             <p
-              className={`${utilStyles.fontLora} ${utilStyles.italic} ${styles.title}`}
+              className={`${lora.className} ${utilStyles.italic} ${styles.title}`}
             >
               web developer
             </p>
