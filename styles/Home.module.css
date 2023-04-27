@@ -50,8 +50,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  border-radius: 100%;
-  background-color: rgba(17, 106, 95, 0.1);
+  /* border-radius: 100%;
+  background-color: rgba(17, 106, 95, 0.1); */
   padding: 10px;
 }
 
