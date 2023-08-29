@@ -3,7 +3,7 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useState } from "react";
 import HoverBlur from "./hoverBlur";
-import { lora } from "../styles/fonts"
+import { lora } from "../styles/fonts";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
@@ -25,10 +25,10 @@ export default function Portfolio() {
       github: "https://github.com/AthenasCode/Interactive-Card-Details-Form",
       live: "https://athenascode.github.io/Interactive-Card-Details-Form/",
     },
-    myPortfolio: {
-      github: "https://github.com/AthenasCode/My-Portfolio",
-      live: null,
-    }
+    manuscriptApp: {
+      github: "https://github.com/ShayneJG/Manuscript-Manager",
+      live: "https://manuscript-manager.vercel.app/",
+    },
   };
 
   return (
@@ -90,30 +90,31 @@ export default function Portfolio() {
           />
         </div>
         <div
-          id="myPortfolio"
-          onMouseOver={() => setActiveProject("myPortfolio")}
+          id="manuscriptApp"
+          onMouseOver={() => setActiveProject("manuscriptApp")}
           onMouseOut={() => setActiveProject(null)}
           className={styles.projectContainer}
         >
           <div className={styles.projectImageParent}>
             <Image
-              src="/images/portfolio-screenshot.jpg"
+              src="/images/manuscript-manager-screenshot.png"
               fill
               className={`${utilStyles.objectContain} ${styles.projectImage}`}
-              alt="My Portfolio Screenshot"
+              alt="Manuscript Manager Screenshot"
             />
           </div>
           <p className={`${styles.projectTitle}`}>
-            My Portfolio | Next.js, CSS Modules
+            Manuscript Manager | Next.js, AuthO
           </p>
           <p
             className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
           >
-            This portfolio.
+            A collaborative project for an app that tracks monthly freelance
+            earnings.
           </p>
           <HoverBlur
-            isActive={activeProject === "myPortfolio"}
-            links={projectLinks.myPortfolio}
+            isActive={activeProject === "manuscriptApp"}
+            links={projectLinks.manuscriptApp}
           />
         </div>
         <div
@@ -141,35 +142,6 @@ export default function Portfolio() {
           <HoverBlur
             isActive={activeProject === "cardDetails"}
             links={projectLinks.cardDetails}
-          />
-        </div>
-        
-        
-        <div
-          id="ratingsComponent"
-          onMouseOver={() => setActiveProject("ratingsComponent")}
-          onMouseOut={() => setActiveProject(null)}
-          className={styles.projectContainer}
-        >
-          <div id="project-image" className={styles.projectImageParent}>
-            <Image
-              src="/images/interactive-rating-component-screenshot.jpg"
-              fill
-              className={utilStyles.objectContain}
-              alt="Interactive Rating Component"
-            />
-          </div>
-          <p className={`${styles.projectTitle}`}>
-            Interactive Rating Component | Tailwind, Vite, React
-          </p>
-          <p
-            className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
-          >
-            A small interactive component.
-          </p>
-          <HoverBlur
-            isActive={activeProject === "ratingsComponent"}
-            links={projectLinks.ratingsComponent}
           />
         </div>
       </div>
