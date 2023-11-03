@@ -61,3 +61,9 @@
 .objectContain {
   object-fit: contain;
 }
+
+.socialSvgContainers {
+  height: 27px;
+  display: flex;
+  align-items: center;
+}

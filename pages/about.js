@@ -12,9 +12,12 @@ export default function About() {
         About
       </h2>
       <p className={styles.aboutContent}>
-        A web developer with experience primarily in frontend React and
-        interests in UI/UX, backend integration, and learning other
-        technologies.
+        Hi, I'm Emma! I'm a web developer with experience primarily in frontend
+        React and interests in UI/UX, backend integration, and learning other
+        technologies. <br />
+        <br />I started teaching myself programming in 2022, seeking a hobby
+        that felt useful and challenging. Outside of programming, I enjoy video
+        games, running, and spending time with family.
       </p>
     </Layout>
   );

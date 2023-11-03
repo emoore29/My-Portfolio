@@ -9,6 +9,7 @@ import sunIcon from "../public/images/day-mode.svg";
 import moonIcon from "../public/images/night-mode.svg";
 import { lora } from "../styles/fonts";
 import MenuIcon from "./icons/menuIcon";
+import GhIcon from "./icons/gitHubIcon";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
@@ -131,13 +132,7 @@ export default function Layout({ children, home }) {
       <footer className={styles.socialsFooter}>
         <div id="github">
           <a target="_blank" href="https://github.com/AthenasCode">
-            <Image
-              className={styles.socialsImg}
-              src="/images/github-mark.png"
-              height={40}
-              width={40}
-              alt="Github icon"
-            />
+            <GhIcon />
           </a>
         </div>
         <a
@@ -148,8 +143,8 @@ export default function Layout({ children, home }) {
             <Image
               className={styles.socialsImg}
               src="/images/LI-In-Bug.png"
-              height={40}
-              width={44}
+              height={27}
+              width={30}
               alt="Linkedin icon"
             />
           </div>
