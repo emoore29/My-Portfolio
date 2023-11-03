@@ -1,6 +1,7 @@
 import { useForm, ValidationError } from "@formspree/react";
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/Home.module.css";
+import Layout from "../components/layout";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
@@ -13,7 +14,7 @@ export default function Contact() {
   }
 
   return (
-    <>
+    <Layout>
       <h2 id="contact" className={utilStyles.headingMd}>
         Contact
       </h2>
@@ -55,6 +56,6 @@ export default function Contact() {
           Submit
         </button>
       </form>
-    </>
+    </Layout>
   );
 }

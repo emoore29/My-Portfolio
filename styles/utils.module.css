@@ -1,6 +1,3 @@
-
-
-
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
@@ -13,7 +10,6 @@
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 600;
-  /* margin: 1rem 0; */
 }
 
 .headingLg {
@@ -21,14 +17,14 @@
   line-height: 1.4;
   font-weight: 400;
   margin: 1rem 0;
-  color: #116a5f;
+  color: var(--text-primary);
 }
 
 .headingMd {
   font-size: 1.2rem;
   /* line-height: 1.5; */
   font-weight: 400;
-  color: #116a5f;
+  color: var(--text-primary);
 }
 
 .borderCircle {
@@ -55,7 +51,7 @@
 }
 
 .lightText {
-  color: #666;
+  color: var(--light-text);
 }
 
 .italic {

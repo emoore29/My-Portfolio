@@ -2,8 +2,9 @@ import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useState } from "react";
-import HoverBlur from "./hoverBlur";
+import HoverBlur from "../components/hoverBlur";
 import { lora } from "../styles/fonts";
+import Layout from "../components/layout";
 
 export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(null);
@@ -50,40 +51,42 @@ export default function Portfolio() {
   ];
 
   return (
-    <section className={styles.portfolioContainer}>
-      <h2 id="portfolio" className={utilStyles.headingMd}>
-        Portfolio
-      </h2>
-      <div className={styles.portfolioGrid}>
-        {projectLinks.map((project) => (
-          <div
-            id={project.id}
-            onMouseOver={() => setActiveProject(project.id)}
-            onMouseOut={() => setActiveProject(null)}
-            className={styles.projectContainer}
-          >
-            <div className={styles.projectImageParent}>
-              <Image
-                src={"/images/" + project.src}
-                fill
-                className={`${utilStyles.objectContain} ${styles.projectImage}`}
-                alt={project.alt}
+    <Layout>
+      <section className={styles.portfolioContainer}>
+        <h2 id="portfolio" className={utilStyles.headingMd}>
+          Portfolio
+        </h2>
+        <div className={styles.portfolioGrid}>
+          {projectLinks.map((project) => (
+            <div
+              id={project.id}
+              onMouseOver={() => setActiveProject(project.id)}
+              onMouseOut={() => setActiveProject(null)}
+              className={styles.projectContainer}
+            >
+              <div className={styles.projectImageParent}>
+                <Image
+                  src={"/images/" + project.src}
+                  fill
+                  className={`${utilStyles.objectContain} ${styles.projectImage}`}
+                  alt={project.alt}
+                />
+              </div>
+              <p className={`${styles.projectTitle}`}>{project.title}</p>
+              <p
+                className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
+              >
+                {project.description}
+              </p>
+              <HoverBlur
+                isActive={activeProject === project.id}
+                github={project.github}
+                live={project.live}
               />
             </div>
-            <p className={`${styles.projectTitle}`}>{project.title}</p>
-            <p
-              className={`${utilStyles.italic} ${lora.className} ${styles.projectDescription}`}
-            >
-              {project.description}
-            </p>
-            <HoverBlur
-              isActive={activeProject === project.id}
-              github={project.github}
-              live={project.live}
-            />
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </Layout>
   );
 }

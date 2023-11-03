@@ -1,13 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --background: #f8f6f1;
+  --background-lighter: #fefdfa;
+  --main-text: #1f1111;
+  --text-primary: #502326;
+  --text-secondary: #a23e48;
+  --primary-contrast: #a23e48;
+  --light-text: #666;
+}
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: "Lora", sans-serif;
+  color: var(--main-text);
   line-height: 1.6;
   font-size: 18px;
-  background-color: #f5f5f5;
+  background-color: var(--background);
 }
 
 * {
@@ -19,27 +31,22 @@ p {
   margin: 0;
 }
 
-/* p {
-  font-size: 0.95rem;
-} */
-
 ul {
   margin: 0;
   padding: 0;
-  /* list-style: none; */
 }
 
 a {
   text-decoration: none;
-  color: #1b1b7d;
-}
-
-a:hover {
-  text-decoration: underline;
+  color: var(--text-primary);
 }
 
 a:visited {
-  color: #263b55;
+  color: var(--text-secondary);
+}
+
+a:hover {
+  color: var(--primary-contrast);
 }
 
 img {
@@ -50,8 +57,8 @@ img {
 button {
   background: none;
   border: none;
-  -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  /* -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2); */
   padding: 5px;
   margin: 0;
   font: inherit;
@@ -65,7 +72,7 @@ button:hover {
 }
 
 button:active {
-  background-color: rgba(17, 106, 96, 0.219);
+  background-color: rgb(106, 17, 17);
 }
 
 fieldset {

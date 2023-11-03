@@ -7,7 +7,8 @@ import Image from "next/image";
 import menuIcon from "../public/images/menu-icon.svg";
 import sunIcon from "../public/images/day-mode.svg";
 import moonIcon from "../public/images/night-mode.svg";
-import { lora } from "../styles/fonts"
+import { lora } from "../styles/fonts";
+import MenuIcon from "./icons/menuIcon";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
@@ -29,10 +30,7 @@ export default function Layout({ children, home }) {
     <div className={styles.container}>
       <Head>
         {/* <link rel="icon" href="/favicon.ico" /> Icon for future addition */}
-        <meta
-          name="description"
-          content="Emma Moore's web dev portfolio."
-        />
+        <meta name="description" content="Emma Moore's web dev portfolio." />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -41,86 +39,73 @@ export default function Layout({ children, home }) {
         />
         <meta name="og:title" content={siteTitle} />
       </Head>
-      <header className={home ? `${styles.header}` : `${styles.blogHeader}`}>
-        {home ? (
-          <>
-            <h1
-              className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
-            >
-              {name}
-            </h1>
-            <p
-              className={`${lora.className} ${utilStyles.italic} ${styles.title}`}
-            >
-              web developer
-            </p>
+      <header className={styles.header}>
+        <h1
+          className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
+        >
+          {name}
+        </h1>
+        <p className={`${lora.className} ${utilStyles.italic} ${styles.title}`}>
+          web developer
+        </p>
 
-            <nav className={styles.navBar}>
-              <ul className={styles.navList}>
-                <li>
-                  <a href="/#about">About</a>
-                </li>
-                <li>
-                  <a href="/#portfolio">Portfolio</a>
-                </li>
-                <li>
-                  <a href="/#skills">Skills</a>
-                </li>
-
-                <li>
-                  <Link href="/notes">Notes</Link>
-                </li>
-                <li>
-                  <a href="/#contact">Contact</a>
-                </li>
-              </ul>
-            </nav>
-            {/* Mobile nav button displays <768px */}
-            <div className={styles.mobileNav}>
-              <button>
-                <Image
+        <nav className={styles.navBar}>
+          <ul className={styles.navList}>
+            <li>
+              <a href="/about">About</a>
+            </li>
+            <li>
+              <a href="/portfolio">Portfolio</a>
+            </li>
+            <li>
+              <Link href="/notes">Notes</Link>
+            </li>
+            <li>
+              <a href="/contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        {/* Mobile nav button displays <768px */}
+        <div className={styles.mobileNav}>
+          <button>
+            <MenuIcon toggleMenu={toggleMenu} />
+            {/* <Image
                   onClick={toggleMenu}
                   priority
                   src={menuIcon}
                   alt="Menu button"
                   width="35"
                   height="35"
-                />
-              </button>
-              {isOpen && (
-                <nav className={styles.mobileNavList}>
-                  <ul>
-                    <li>
-                      <a onClick={toggleMenu} href="/#about">
-                        About
-                      </a>
-                    </li>
-                    <li>
-                      <a onClick={toggleMenu} href="/#portfolio">
-                        Portfolio
-                      </a>
-                    </li>
-                    <li>
-                      <a onClick={toggleMenu} href="/#skills">
-                        Skills
-                      </a>
-                    </li>
-
-                    <li>
-                      <Link onClick={toggleMenu} href="/blog">
-                        Notes
-                      </Link>
-                    </li>
-                    <li>
-                      <a onClick={toggleMenu} href="/#contact">
-                        Contact
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              )}
-            </div>
-            {/* <button className={styles.nightModeToggler}>
+                /> */}
+          </button>
+          {isOpen && (
+            <nav className={styles.mobileNavList}>
+              <ul>
+                <li>
+                  <a onClick={toggleMenu} href="/#about">
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a onClick={toggleMenu} href="/#portfolio">
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <Link onClick={toggleMenu} href="/blog">
+                    Notes
+                  </Link>
+                </li>
+                <li>
+                  <a onClick={toggleMenu} href="/#contact">
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          )}
+        </div>
+        {/* <button className={styles.nightModeToggler}>
               {dayMode ? (
                 <Image
                   onClick={toggleDayMode}
@@ -141,47 +126,35 @@ export default function Layout({ children, home }) {
                 />
               )}
             </button> */}
-          </>
-        ) : (
-          <>
-            <h2 className={`${utilStyles.headingXl} ${lora.className}`}>
-              <Link href="/" className={utilStyles.colorInherit}>
-                {name}
-              </Link>
-            </h2>
-          </>
-        )}
       </header>
       <main>{children}</main>
-      {home && (
-        <footer className={styles.socialsFooter}>
-          <div id="github">
-            <a target="_blank" href="https://github.com/AthenasCode">
-              <Image
-                className={styles.socialsImg}
-                src="/images/github-mark.png"
-                height={40}
-                width={40}
-                alt="Github icon"
-              />
-            </a>
-          </div>
-          <a
-            href="https://www.linkedin.com/in/emma-moore-063608b0/"
-            target="_blank"
-          >
-            <div id="linkedin">
-              <Image
-                className={styles.socialsImg}
-                src="/images/LI-In-Bug.png"
-                height={40}
-                width={44}
-                alt="Linkedin icon"
-              />
-            </div>
+      <footer className={styles.socialsFooter}>
+        <div id="github">
+          <a target="_blank" href="https://github.com/AthenasCode">
+            <Image
+              className={styles.socialsImg}
+              src="/images/github-mark.png"
+              height={40}
+              width={40}
+              alt="Github icon"
+            />
           </a>
-        </footer>
-      )}
+        </div>
+        <a
+          href="https://www.linkedin.com/in/emma-moore-063608b0/"
+          target="_blank"
+        >
+          <div id="linkedin">
+            <Image
+              className={styles.socialsImg}
+              src="/images/LI-In-Bug.png"
+              height={40}
+              width={44}
+              alt="Linkedin icon"
+            />
+          </div>
+        </a>
+      </footer>
     </div>
   );
 }
