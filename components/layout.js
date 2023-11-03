@@ -28,49 +28,52 @@ export default function Layout({ children, home }) {
   // }; // dark/light mode for future implementation
 
   return (
-    <div className={styles.container}>
-      <Head>
-        {/* <link rel="icon" href="/favicon.ico" /> Icon for future addition */}
-        <meta name="description" content="Emma Moore's web dev portfolio." />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-      </Head>
-      <header className={styles.header}>
-        <h1
-          className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
-        >
-          {name}
-        </h1>
-        <p className={`${lora.className} ${utilStyles.italic} ${styles.title}`}>
-          web developer
-        </p>
+    <>
+      <div className={styles.container}>
+        <Head>
+          {/* <link rel="icon" href="/favicon.ico" /> Icon for future addition */}
+          <meta name="description" content="Emma Moore's web dev portfolio." />
+          <meta
+            property="og:image"
+            content={`https://og-image.vercel.app/${encodeURI(
+              siteTitle
+            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          />
+          <meta name="og:title" content={siteTitle} />
+        </Head>
+        <header className={styles.header}>
+          <h1
+            className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
+          >
+            {name}
+          </h1>
+          <p
+            className={`${lora.className} ${utilStyles.italic} ${styles.title}`}
+          >
+            web developer
+          </p>
 
-        <nav className={styles.navBar}>
-          <ul className={styles.navList}>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/portfolio">Portfolio</a>
-            </li>
-            <li>
-              <Link href="/notes">Notes</Link>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-        {/* Mobile nav button displays <768px */}
-        <div className={styles.mobileNav}>
-          <button>
-            <MenuIcon toggleMenu={toggleMenu} />
-            {/* <Image
+          <nav className={styles.navBar}>
+            <ul className={styles.navList}>
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="/portfolio">Portfolio</a>
+              </li>
+              <li>
+                <Link href="/notes">Notes</Link>
+              </li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+          </nav>
+          {/* Mobile nav button displays <768px */}
+          <div className={styles.mobileNav}>
+            <button>
+              <MenuIcon toggleMenu={toggleMenu} />
+              {/* <Image
                   onClick={toggleMenu}
                   priority
                   src={menuIcon}
@@ -78,35 +81,35 @@ export default function Layout({ children, home }) {
                   width="35"
                   height="35"
                 /> */}
-          </button>
-          {isOpen && (
-            <nav className={styles.mobileNavList}>
-              <ul>
-                <li>
-                  <a onClick={toggleMenu} href="/#about">
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a onClick={toggleMenu} href="/#portfolio">
-                    Portfolio
-                  </a>
-                </li>
-                <li>
-                  <Link onClick={toggleMenu} href="/blog">
-                    Notes
-                  </Link>
-                </li>
-                <li>
-                  <a onClick={toggleMenu} href="/#contact">
-                    Contact
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          )}
-        </div>
-        {/* <button className={styles.nightModeToggler}>
+            </button>
+            {isOpen && (
+              <nav className={styles.mobileNavList}>
+                <ul>
+                  <li>
+                    <a onClick={toggleMenu} href="/#about">
+                      About
+                    </a>
+                  </li>
+                  <li>
+                    <a onClick={toggleMenu} href="/#portfolio">
+                      Portfolio
+                    </a>
+                  </li>
+                  <li>
+                    <Link onClick={toggleMenu} href="/blog">
+                      Notes
+                    </Link>
+                  </li>
+                  <li>
+                    <a onClick={toggleMenu} href="/#contact">
+                      Contact
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            )}
+          </div>
+          {/* <button className={styles.nightModeToggler}>
               {dayMode ? (
                 <Image
                   onClick={toggleDayMode}
@@ -127,29 +130,30 @@ export default function Layout({ children, home }) {
                 />
               )}
             </button> */}
-      </header>
-      <main>{children}</main>
-      <footer className={styles.socialsFooter}>
-        <div id="github">
-          <a target="_blank" href="https://github.com/AthenasCode">
-            <GhIcon />
-          </a>
-        </div>
-        <a
-          href="https://www.linkedin.com/in/emma-moore-063608b0/"
-          target="_blank"
-        >
-          <div id="linkedin">
-            <Image
-              className={styles.socialsImg}
-              src="/images/LI-In-Bug.png"
-              height={27}
-              width={30}
-              alt="Linkedin icon"
-            />
+        </header>
+        <main className={styles.content}>{children}</main>
+        <footer className={styles.socialsFooter}>
+          <div id="github">
+            <a target="_blank" href="https://github.com/AthenasCode">
+              <GhIcon />
+            </a>
           </div>
-        </a>
-      </footer>
-    </div>
+          <a
+            href="https://www.linkedin.com/in/emma-moore-063608b0/"
+            target="_blank"
+          >
+            <div id="linkedin">
+              <Image
+                className={styles.socialsImg}
+                src="/images/LI-In-Bug.png"
+                height={27}
+                width={30}
+                alt="Linkedin icon"
+              />
+            </div>
+          </a>
+        </footer>
+      </div>
+    </>
   );
 }
