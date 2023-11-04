@@ -56,15 +56,16 @@ export default function Portfolio() {
         <h2 id="portfolio" className={utilStyles.headingMd}>
           Portfolio
         </h2>
-        <div className={styles.portfolioGrid}>
+        <ul className={styles.portfolioItems}>
           {projectLinks.map((project) => (
-            <div
+            <li
               id={project.id}
               onMouseOver={() => setActiveProject(project.id)}
               onMouseOut={() => setActiveProject(null)}
               className={styles.projectContainer}
             >
-              <div className={styles.projectImageParent}>
+              <p>{project.title}</p>
+              {/* <div className={styles.projectImageParent}>
                 <Image
                   src={"/images/" + project.src}
                   fill
@@ -82,10 +83,10 @@ export default function Portfolio() {
                 isActive={activeProject === project.id}
                 github={project.github}
                 live={project.live}
-              />
-            </div>
+              /> */}
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     </Layout>
   );
