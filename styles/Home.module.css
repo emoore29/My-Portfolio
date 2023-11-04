@@ -103,21 +103,23 @@
 }
 
 /* CONTACT FORM */
-.contactContainer {
-  margin-bottom: 6rem;
+.contactForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 }
 
 .contactForm fieldset {
   display: flex;
   flex-direction: column;
-  align-items: left;
   width: 100%;
+  max-width: 500px;
 }
 
 .contactForm label {
   display: inline-block;
   font-size: 14px;
-  width: 10%;
 }
 
 .contactForm input,
@@ -135,6 +137,7 @@
 
 .contactSubmitBtn {
   width: 100%;
+  max-width: 500px;
   background-color: var(--primary);
   color: var(--background);
   font-size: 14px;
