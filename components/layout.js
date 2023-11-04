@@ -1,15 +1,8 @@
 import Head from "next/head";
 import styles from "../styles/layout.module.css";
 import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
 import { useState } from "react";
-import Image from "next/image";
-import menuIcon from "../public/images/menu-icon.svg";
-import sunIcon from "../public/images/day-mode.svg";
-import moonIcon from "../public/images/night-mode.svg";
 import { lora } from "../styles/fonts";
-import MenuIcon from "./icons/menuIcon";
-import GhIcon from "./icons/gitHubIcon";
 import Navigation from "./navigation";
 import MobileNavigation from "./mobileNavigation";
 import Footer from "./footer";
