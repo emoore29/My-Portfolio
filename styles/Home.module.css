@@ -144,7 +144,7 @@
 
 .contactSubmitBtn {
   width: 100%;
-  background-color: var(--text-primary);
+  background-color: var(--primary);
   color: var(--background);
   font-size: 14px;
   border-radius: 5px;

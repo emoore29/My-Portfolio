@@ -14,17 +14,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows: repeat(2, 1fr);
-  color: var(--text-primary);
+  color: var(--primary);
   padding-bottom: 1rem;
   margin: 2rem auto 1rem;
   background-image: radial-gradient(
-    circle at 5px 2px,
-    var(--text-primary),
-    var(--text-primary) 3px,
-    transparent 4px
+    circle,
+    var(--secondary),
+    var(--secondary) 2px,
+    transparent 3px
   );
-  background-position: bottom;
-  background-size: 2px 1px;
+  background-position: -12px bottom;
+  background-size: 30px 6px;
   background-repeat: repeat-x;
   width: 100%;
   max-width: 50rem;
@@ -48,6 +48,10 @@
   grid-row: 2 / 3;
 }
 
+.subtitle {
+  color: var(--secondary);
+}
+
 /* NAVBAR */
 .navBar {
   grid-row: 1 / 3;
@@ -61,7 +65,7 @@
 }
 
 .navList a {
-  color: var(--text-primary);
+  color: var(--primary);
 }
 
 .navList a:hover {
@@ -103,13 +107,13 @@
 .content {
   width: 100%;
   max-width: 50rem;
-  padding: 1rem 3rem;
+  padding: 1rem 3rem 5rem;
   margin: 0 auto 0;
 }
 
 @media (min-width: 768px) {
   .content {
-    padding: 2rem 0;
+    padding: 2rem 0 5rem;
   }
 }
 
@@ -119,8 +123,8 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: var(--text-primary);
-  padding: 1rem;
+  background-color: var(--background-secondary);
+  padding: 3rem;
   margin-top: auto;
 }
 
@@ -141,7 +145,7 @@
     -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    background-color: var(--background-lighter);
+    background-color: var(--background-raised);
   }
 
   .navList {

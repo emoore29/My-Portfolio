@@ -5,7 +5,7 @@ import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "../../styles/Home.module.css";
-import { lora } from "../../styles/fonts"
+import { lora } from "../../styles/fonts";
 
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
@@ -34,7 +34,9 @@ export default function Post({ postData }) {
         <h1 className={`${utilStyles.headingMd} ${styles.blogTitleAndDate}`}>
           {postData.title}
         </h1>
-        <div className={`${utilStyles.lightText}  ${styles.blogTitleAndDate}`}>
+        <div
+          className={`${utilStyles.secondaryText}  ${styles.blogTitleAndDate}`}
+        >
           <Date dateString={postData.date} />
         </div>
         <div

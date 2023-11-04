@@ -48,7 +48,7 @@ export default function Layout({ children, home }) {
             {name}
           </h1>
           <p
-            className={`${lora.className} ${utilStyles.italic} ${styles.title}`}
+            className={`${lora.className} ${utilStyles.italic} ${styles.title} ${styles.subtitle}`}
           >
             web developer
           </p>

@@ -6,7 +6,7 @@ export default function MenuIcon({ toggleMenu }) {
       fill="none"
       viewBox="0 0 24 24"
       stroke-width="1.5"
-      stroke="var(--text-primary)"
+      stroke="var(--primary)"
       width={35}
       height={35}
     >

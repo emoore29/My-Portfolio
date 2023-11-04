@@ -17,14 +17,24 @@
   line-height: 1.4;
   font-weight: 400;
   margin: 1rem 0;
-  color: var(--text-primary);
+  color: var(--primary);
 }
 
 .headingMd {
   font-size: 1.2rem;
-  /* line-height: 1.5; */
-  font-weight: 400;
-  color: var(--text-primary);
+  line-height: 1.5;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  color: var(--primary);
+  background-image: radial-gradient(
+    circle at 5px 2px,
+    var(--secondary),
+    var(--secondary) 3px,
+    transparent 4px
+  );
+  background-position: bottom;
+  background-size: 2px 1px;
+  background-repeat: repeat-x;
 }
 
 .borderCircle {
@@ -50,8 +60,12 @@
   font-size: 18px;
 }
 
-.lightText {
-  color: var(--light-text);
+.secondaryText {
+  color: var(--secondary);
+}
+
+.primaryText {
+  color: var(--primary);
 }
 
 .italic {
