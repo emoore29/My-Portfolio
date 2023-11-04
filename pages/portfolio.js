@@ -14,7 +14,8 @@ export default function Portfolio() {
       id: "artPortfolio",
       github: null,
       live: "https://donnapriceart.com/",
-      title: "Art Portfolio | HTML, CSS, JS",
+      title: "Art Portfolio",
+      tech: "HTML, CSS, JS",
       alt: "Art Portfolio",
       description: "A six-page static website.",
       src: "dp-portfolio-screenshot.jpg",
@@ -23,7 +24,8 @@ export default function Portfolio() {
       id: "pomodoroTimer",
       github: "https://github.com/AthenasCode/Pomodoro",
       live: "https://athenascode.github.io/Pomodoro/",
-      title: "Pomodoro Timer | React",
+      title: "Pomodoro Timer",
+      tech: "React",
       alt: "Pomodoro Timer",
       description: "A minimal, customisable timer.",
       src: "pomo-screenshot.jpg",
@@ -33,7 +35,8 @@ export default function Portfolio() {
       id: "cardDetails",
       github: "https://github.com/AthenasCode/Interactive-Card-Details-Form",
       live: "https://athenascode.github.io/Interactive-Card-Details-Form/",
-      title: "Interactive Card Details Form | Tailwind, React",
+      title: "Interactive Card Details Form",
+      tech: "Tailwind, React",
       alt: "Interactive Card Details Form",
       description: "A form that displays card details as the user types.",
       src: "interactive-card-details-screenshot.jpg",
@@ -42,7 +45,8 @@ export default function Portfolio() {
       id: "manuscriptApp",
       github: "https://github.com/ShayneJG/Manuscript-Manager",
       live: "https://manuscript-manager.vercel.app/",
-      title: "Manuscript Manager | Next.js, AuthO",
+      title: "Manuscript Manager",
+      tech: "Next.js, Auth0",
       alt: "Manuscript Manager",
       description:
         "A collaborative project with a fellow programmer for an app that tracks monthly freelance earnings.",
@@ -64,7 +68,14 @@ export default function Portfolio() {
               onMouseOut={() => setActiveProject(null)}
               className={styles.projectContainer}
             >
-              <p>{project.title}</p>
+              <Image
+                width={500}
+                height={500}
+                alt="Picture of the author"
+                src={`/${project.src}`}
+              />
+              <p className={styles.projectName}>{project.title}</p>
+              <p className={styles.projectTech}>{project.tech}</p>
               {/* <div className={styles.projectImageParent}>
                 <Image
                   src={"/images/" + project.src}

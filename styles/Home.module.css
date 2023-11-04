@@ -41,6 +41,18 @@
 .portfolioContainer {
   margin-bottom: 6rem;
 }
+
+.projectName {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.projectTech {
+  color: var(--secondary);
+  font-size: 16px;
+  font-style: italic;
+}
+
 .portfolioItems {
   display: flex;
   flex-direction: column;
@@ -50,10 +62,6 @@
 .projectContainer {
   position: relative;
   overflow: hidden;
-}
-
-.projectContainer p {
-  padding: 0.1rem 0.5rem;
 }
 
 .projectImageParent {
