@@ -33,7 +33,7 @@
 For the first dot to align with the left of the container, it must be shifted left the amount of whitespace created by the background width:
 so the background width minus the radius of the dot, divided by 2 */
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .header {
     padding: 2rem 0;
     margin: 4rem auto 1rem;
@@ -113,7 +113,7 @@ so the background width minus the radius of the dot, divided by 2 */
   margin: 0 auto 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .content {
     padding: 2rem 0 5rem;
   }

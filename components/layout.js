@@ -10,23 +10,19 @@ import moonIcon from "../public/images/night-mode.svg";
 import { lora } from "../styles/fonts";
 import MenuIcon from "./icons/menuIcon";
 import GhIcon from "./icons/gitHubIcon";
-import WaveSvg from "./icons/waveSvg";
+import Navigation from "./navigation";
+import MobileNavigation from "./mobileNavigation";
+import Footer from "./footer";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
 
 export default function Layout({ children, home }) {
-  // children are shown in <main> so whenever components/pages are nested inside <Layout></Layout> they are displayed there (between the header and footer)
   const [isOpen, setIsOpen] = useState(false);
-  // const [dayMode, setDayMode] = useState(true); // dark/light mode for future implementation
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
-  // const toggleDayMode = () => {
-  //   setDayMode(!dayMode);
-  // }; // dark/light mode for future implementation
 
   return (
     <>
@@ -53,106 +49,11 @@ export default function Layout({ children, home }) {
           >
             web developer
           </p>
-
-          <nav className={styles.navBar}>
-            <ul className={styles.navList}>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-              <li>
-                <Link href="/portfolio">Portfolio</Link>
-              </li>
-              <li>
-                <Link href="/notes">Notes</Link>
-              </li>
-              <li>
-                <Link href="/contact">Contact</Link>
-              </li>
-            </ul>
-          </nav>
-          {/* Mobile nav button displays <768px */}
-          <div className={styles.mobileNav}>
-            <button>
-              <MenuIcon toggleMenu={toggleMenu} />
-              {/* <Image
-                  onClick={toggleMenu}
-                  priority
-                  src={menuIcon}
-                  alt="Menu button"
-                  width="35"
-                  height="35"
-                /> */}
-            </button>
-            {isOpen && (
-              <nav className={styles.mobileNavList}>
-                <ul>
-                  <li>
-                    <Link onClick={toggleMenu} href="/about">
-                      About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={toggleMenu} href="/portfolio">
-                      Portfolio
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={toggleMenu} href="/notes">
-                      Notes
-                    </Link>
-                  </li>
-                  <li>
-                    <Link onClick={toggleMenu} href="/contact">
-                      Contact
-                    </Link>
-                  </li>
-                </ul>
-              </nav>
-            )}
-          </div>
-          {/* <button className={styles.nightModeToggler}>
-              {dayMode ? (
-                <Image
-                  onClick={toggleDayMode}
-                  priority
-                  src={sunIcon}
-                  alt="Day/night mode toggle"
-                  width="35"
-                  height="35"
-                />
-              ) : (
-                <Image
-                  onClick={toggleDayMode}
-                  priority
-                  src={moonIcon}
-                  alt="Day/night mode toggle"
-                  width="35"
-                  height="35"
-                />
-              )}
-            </button> */}
+          <Navigation />
+          <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} />
         </header>
         <main className={styles.content}>{children}</main>
-        <footer className={styles.socialsFooter}>
-          {/* <WaveSvg /> */}
-          <section className={styles.logoSection}>
-            <a target="_blank" href="https://github.com/AthenasCode">
-              <GhIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/emma-moore-063608b0/"
-              target="_blank"
-            >
-              <Image
-                className={styles.socialsImg}
-                src="/images/LI-In-Bug.png"
-                height={27}
-                width={30}
-                alt="Linkedin icon"
-              />
-            </a>
-          </section>
-        </footer>
+        <Footer />
       </div>
     </>
   );
