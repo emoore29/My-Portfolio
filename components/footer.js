@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className={styles.socialsFooter}>
-      {/* <WaveSvg /> */}
       <section className={styles.logoSection}>
         <a target="_blank" href="https://github.com/AthenasCode">
           <GhIcon />

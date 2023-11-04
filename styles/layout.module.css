@@ -146,14 +146,20 @@ so the background width minus the radius of the dot, divided by 2 */
     display: block;
   }
 
-  .mobileNavList {
+  .mobileNavListContainer {
     position: absolute;
     right: 0px;
     border-radius: 5%;
     -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 1.5rem;
     background-color: var(--background-raised);
+  }
+
+  .mobileNavListFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .navList {

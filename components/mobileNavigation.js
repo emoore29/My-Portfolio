@@ -7,18 +7,10 @@ export default function MobileNavigation({ toggleMenu, isOpen }) {
     <div className={styles.mobileNav}>
       <button>
         <MenuIcon toggleMenu={toggleMenu} />
-        {/* <Image
-                  onClick={toggleMenu}
-                  priority
-                  src={menuIcon}
-                  alt="Menu button"
-                  width="35"
-                  height="35"
-                /> */}
       </button>
       {isOpen && (
-        <nav className={styles.mobileNavList}>
-          <ul>
+        <nav className={styles.mobileNavListContainer}>
+          <ul className={styles.mobileNavListFlex}>
             <li>
               <Link onClick={toggleMenu} href="/about">
                 About
