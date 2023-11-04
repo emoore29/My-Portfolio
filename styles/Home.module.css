@@ -107,9 +107,6 @@
   margin-bottom: 6rem;
 }
 
-.contactForm {
-}
-
 .contactForm fieldset {
   display: flex;
   flex-direction: column;

@@ -10,6 +10,7 @@ import moonIcon from "../public/images/night-mode.svg";
 import { lora } from "../styles/fonts";
 import MenuIcon from "./icons/menuIcon";
 import GhIcon from "./icons/gitHubIcon";
+import WaveSvg from "./icons/waveSvg";
 
 const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
@@ -56,16 +57,16 @@ export default function Layout({ children, home }) {
           <nav className={styles.navBar}>
             <ul className={styles.navList}>
               <li>
-                <a href="/about">About</a>
+                <Link href="/about">About</Link>
               </li>
               <li>
-                <a href="/portfolio">Portfolio</a>
+                <Link href="/portfolio">Portfolio</Link>
               </li>
               <li>
                 <Link href="/notes">Notes</Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
           </nav>
@@ -86,14 +87,14 @@ export default function Layout({ children, home }) {
               <nav className={styles.mobileNavList}>
                 <ul>
                   <li>
-                    <a onClick={toggleMenu} href="/about">
+                    <Link onClick={toggleMenu} href="/about">
                       About
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a onClick={toggleMenu} href="/portfolio">
+                    <Link onClick={toggleMenu} href="/portfolio">
                       Portfolio
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <Link onClick={toggleMenu} href="/notes">
@@ -101,9 +102,9 @@ export default function Layout({ children, home }) {
                     </Link>
                   </li>
                   <li>
-                    <a onClick={toggleMenu} href="/contact">
+                    <Link onClick={toggleMenu} href="/contact">
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </nav>
@@ -133,16 +134,15 @@ export default function Layout({ children, home }) {
         </header>
         <main className={styles.content}>{children}</main>
         <footer className={styles.socialsFooter}>
-          <div id="github">
+          {/* <WaveSvg /> */}
+          <section className={styles.logoSection}>
             <a target="_blank" href="https://github.com/AthenasCode">
               <GhIcon />
             </a>
-          </div>
-          <a
-            href="https://www.linkedin.com/in/emma-moore-063608b0/"
-            target="_blank"
-          >
-            <div id="linkedin">
+            <a
+              href="https://www.linkedin.com/in/emma-moore-063608b0/"
+              target="_blank"
+            >
               <Image
                 className={styles.socialsImg}
                 src="/images/LI-In-Bug.png"
@@ -150,8 +150,8 @@ export default function Layout({ children, home }) {
                 width={30}
                 alt="Linkedin icon"
               />
-            </div>
-          </a>
+            </a>
+          </section>
         </footer>
       </div>
     </>
