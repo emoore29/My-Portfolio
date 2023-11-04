@@ -46,18 +46,12 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
-  /* border-radius: 100%;
-  background-color: rgba(17, 106, 95, 0.1); */
-  padding: 10px;
 }
 
 .projectContainer {
   position: relative;
-  border-radius: 0.5rem;
   overflow: hidden;
-  background-color: var(--background);
-  -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+  background-color: var(--background-raised);
 }
 
 .projectContainer p {

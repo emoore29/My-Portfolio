@@ -17,19 +17,23 @@
   color: var(--primary);
   padding-bottom: 1rem;
   margin: 2rem auto 1rem;
-  background-image: radial-gradient(
-    circle,
-    var(--secondary),
-    var(--secondary) 2px,
-    transparent 3px
-  );
-  background-position: -12px bottom;
-  background-size: 30px 6px;
+  background-image: radial-gradient(circle, var(--secondary), transparent 3px);
+  background-position: -13px bottom;
+  background-size: 37px 6px;
   background-repeat: repeat-x;
   width: 100%;
   max-width: 50rem;
   padding: 1rem 3rem;
 }
+
+/* DOT CALCULATION FOR ABOVE BACKGROUND IMAGE */
+/* Radial gradient transparent determines radius of dots (transparent 3px means radius is 3px) */
+/* Background size first value determines width of background (i.e., dot that is automatically centered, + whitespace around it) */
+/* Background size second value should be equivalent to the height of each dot (radius x 2) to make sure it positions correctly on the bottom */
+/* Background position second value places dots on bottom of container */
+/* Background position first value shifts first dot left (for negative value) or right. 
+For the first dot to align with the left of the container, it must be shifted left the amount of whitespace created by the background width:
+so the background width minus the radius of the dot, divided by 2 */
 
 @media (min-width: 768px) {
   .header {
@@ -123,9 +127,14 @@
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 50rem;
   background-color: var(--background-secondary);
   padding: 3rem;
-  margin-top: auto;
+  margin: auto auto 0;
+  background-image: radial-gradient(ellipse, var(--secondary), transparent 3px);
+  background-position: -13px top;
+  background-size: 37px 6px;
+  background-repeat: repeat-x;
 }
 
 .socialsImg {
