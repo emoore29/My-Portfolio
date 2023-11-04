@@ -9,9 +9,6 @@ export default function Home() {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={styles.aboutContainer}>
-        <About />
-      </section>
     </Layout>
   );
 }

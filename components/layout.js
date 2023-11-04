@@ -86,22 +86,22 @@ export default function Layout({ children, home }) {
               <nav className={styles.mobileNavList}>
                 <ul>
                   <li>
-                    <a onClick={toggleMenu} href="/#about">
+                    <a onClick={toggleMenu} href="/about">
                       About
                     </a>
                   </li>
                   <li>
-                    <a onClick={toggleMenu} href="/#portfolio">
+                    <a onClick={toggleMenu} href="/portfolio">
                       Portfolio
                     </a>
                   </li>
                   <li>
-                    <Link onClick={toggleMenu} href="/blog">
+                    <Link onClick={toggleMenu} href="/notes">
                       Notes
                     </Link>
                   </li>
                   <li>
-                    <a onClick={toggleMenu} href="/#contact">
+                    <a onClick={toggleMenu} href="/contact">
                       Contact
                     </a>
                   </li>

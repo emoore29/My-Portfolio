@@ -16,7 +16,7 @@
   grid-template-rows: repeat(2, 1fr);
   color: var(--text-primary);
   padding-bottom: 1rem;
-  margin: 4rem auto 1rem;
+  margin: 2rem auto 1rem;
   background-image: radial-gradient(
     circle at 5px 2px,
     var(--text-primary),
@@ -28,7 +28,14 @@
   background-repeat: repeat-x;
   width: 100%;
   max-width: 50rem;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
+}
+
+@media (min-width: 768px) {
+  .header {
+    padding: 2rem 0;
+    margin: 4rem auto 1rem;
+  }
 }
 
 /* HEADER NAME AND TITLE/DESCRIPTION */
@@ -96,8 +103,14 @@
 .content {
   width: 100%;
   max-width: 50rem;
-  padding: 2rem 3rem;
+  padding: 1rem 3rem;
   margin: 0 auto 0;
+}
+
+@media (min-width: 768px) {
+  .content {
+    padding: 2rem 0;
+  }
 }
 
 /* FOOTER */
