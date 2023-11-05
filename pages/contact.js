@@ -1,26 +1,32 @@
 import { useForm, ValidationError } from "@formspree/react";
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/Home.module.css";
+import Layout from "../components/layout";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
   if (state.succeeded) {
     return (
-      <p className={styles.formThankYou}>
-        Thanks for your message! I will get back to you as soon as I can.
-      </p>
+      <Layout>
+        <h2 id="contact" className={utilStyles.headingMd}>
+          Contact
+        </h2>
+        <p className={styles.formThankYou}>
+          Thanks for your message! I will get back to you as soon as I can.
+        </p>
+      </Layout>
     );
   }
 
   return (
-    <>
+    <Layout>
       <h2 id="contact" className={utilStyles.headingMd}>
         Contact
       </h2>
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <fieldset>
           <label htmlFor="name">Name: </label>
-          <input type="text" id="name" placeholder="Jane Smith" />
+          <input type="text" id="name" placeholder="Your name" />
         </fieldset>
         <fieldset>
           <label htmlFor="email">Email: </label>
@@ -28,7 +34,7 @@ export default function Contact() {
             id="email"
             name="email"
             type="email"
-            placeholder="janesmith@gmail.com"
+            placeholder="your@email.com"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
         </fieldset>
@@ -39,7 +45,7 @@ export default function Contact() {
             name="message"
             id="message"
             className={styles.formMessage}
-            placeholder="Type your message here and I will get back to you!"
+            placeholder="Your message"
           />
           <ValidationError
             prefix="Message"
@@ -55,6 +61,6 @@ export default function Contact() {
           Submit
         </button>
       </form>
-    </>
+    </Layout>
   );
 }

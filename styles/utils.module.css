@@ -1,19 +1,16 @@
-
-
-
 .heading2Xl {
   font-size: 2.5rem;
   line-height: 1.2;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.05rem;
-  margin: 1rem 0;
+  margin: 0 0 1rem;
+  text-align: center;
 }
 
 .headingXl {
   font-size: 2rem;
   line-height: 1.3;
   font-weight: 600;
-  /* margin: 1rem 0; */
 }
 
 .headingLg {
@@ -21,14 +18,15 @@
   line-height: 1.4;
   font-weight: 400;
   margin: 1rem 0;
-  color: #116a5f;
+  color: var(--primary);
 }
 
 .headingMd {
   font-size: 1.2rem;
-  /* line-height: 1.5; */
-  font-weight: 400;
-  color: #116a5f;
+  line-height: 1.5;
+  font-weight: 500;
+  padding-bottom: 1rem;
+  color: var(--primary);
 }
 
 .borderCircle {
@@ -54,8 +52,12 @@
   font-size: 18px;
 }
 
-.lightText {
-  color: #666;
+.secondaryText {
+  color: rgba(var(--secondary), 1);
+}
+
+.primaryText {
+  color: var(--primary);
 }
 
 .italic {
@@ -64,4 +66,10 @@
 
 .objectContain {
   object-fit: contain;
+}
+
+.socialSvgContainers {
+  height: 27px;
+  display: flex;
+  align-items: center;
 }

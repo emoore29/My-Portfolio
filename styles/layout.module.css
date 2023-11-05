@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
-/* Container wrapping header and homepage content */
+/* Container wrapping header, main, and footer */
 .container {
-  max-width: 50rem;
-  padding: 2rem 3rem;
-  margin: 0 auto 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER */
@@ -12,12 +12,66 @@
   display: grid;
   grid-template-columns: 1fr 1fr auto;
   grid-template-rows: repeat(2, 1fr);
-  color: #116a5f;
-  margin-bottom: 5rem;
-  margin-top: 4rem;
+  color: var(--primary);
+  padding-bottom: 1rem;
+  margin: 2rem auto 1rem;
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--secondary), 1),
+    transparent 3px
+  );
+  background-position: -13px bottom;
+  background-size: 37px 6px;
+  background-repeat: repeat-x;
+  width: 100%;
+  max-width: 50rem;
+  padding: 1rem 3rem;
+}
+
+.homeHeader {
+  display: flex;
+  color: var(--primary);
+  padding-bottom: 1rem;
+  margin: auto auto 0;
+  width: 100%;
+  height: 600px;
+  max-width: 50rem;
+  padding: 1rem 3rem;
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--secondary), 1),
+    transparent 3px
+  );
+  background-position: -13px top;
+  background-size: 37px 6px;
+  background-repeat: repeat-x;
+}
+
+/* DOT CALCULATION FOR ABOVE BACKGROUND IMAGE */
+/* Radial gradient transparent determines radius of dots (transparent 3px means radius is 3px) */
+/* Background size first value determines width of background (i.e., dot that is automatically centered, + whitespace around it) */
+/* Background size second value should be equivalent to the height of each dot (radius x 2) to make sure it positions correctly on the bottom */
+/* Background position second value places dots on bottom of container */
+/* Background position first value shifts first dot left (for negative value) or right. 
+For the first dot to align with the left of the container, it must be shifted left the amount of whitespace created by the background width:
+so the background width minus the radius of the dot, divided by 2 */
+
+@media (min-width: 1000px) {
+  .header {
+    padding: 2rem 0;
+    margin: 4rem auto 1rem;
+  }
 }
 
 /* HEADER NAME AND TITLE/DESCRIPTION */
+.homeTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
 .name {
   grid-row: 1 / 2;
   grid-column: 1 / 1;
@@ -27,11 +81,8 @@
   grid-row: 2 / 3;
 }
 
-.blogHeader {
-  display: flex;
-  color: #116a5f;
-  margin-bottom: 5rem;
-  margin-top: 4rem;
+.subtitle {
+  color: rgba(var(--secondary), 1);
 }
 
 /* NAVBAR */
@@ -46,8 +97,26 @@
   list-style: none;
 }
 
+.navHome {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.navListHome {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .navList a {
-  color: #116a5f;
+  color: var(--primary);
+}
+
+.navList a:hover {
+  color: var(--primary-contrast);
 }
 
 .backToHome {
@@ -80,21 +149,60 @@
   border-radius: 15%;
 }
 
+/* MAIN */
+
+.content {
+  width: 100%;
+  max-width: 50rem;
+  padding: 1rem 3rem 5rem;
+  margin: 0 auto 0;
+}
+
+.homeContent {
+  padding: 0;
+  height: 6px;
+  width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--secondary), 1),
+    transparent 3px
+  );
+  background-position: -13px top;
+  background-size: 37px 6px;
+  background-repeat: repeat-x;
+}
+
+@media (min-width: 1000px) {
+  .content {
+    padding: 2rem 0 5rem;
+  }
+}
+
 /* FOOTER */
 
 .socialsFooter {
-  display: flex;
-  justify-content: center;
-  width: 100%;
   position: relative;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(245, 245, 245, 0.8);
-  padding: 1rem;
+  width: 100%;
+  height: 200px;
+  margin-top: auto;
+  background-image: url('data:image/svg+xml,<svg width="100%" height="100%" id="svg" viewBox="0 0 1440 200" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150" ><defs><linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%"><stop offset="5%" stop-color="%23b24d69"></stop><stop offset="95%" stop-color="%238ED1FC"></stop></linearGradient></defs><path d="M 0 200 C 0 200 0 1 0 81 C 64 48 190.2051 107.3744 260 96 C 329.7949 84.6256 374.2821 48.6897 454 37 C 533.7179 25.3103 648.6667 37.8667 747 59 C 845.3333 80.1333 927.0513 109.8436 993 95 C 1058.9487 80.1564 1109.1282 20.759 1181 11 C 1252.8718 1.241 1346.4359 41.1205 1440 81 C 1440 81 1440 200 1440 200 Z" stroke="none" stroke-width="0" fill="url(%23gradient)" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" ></path></svg>');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.socialsImg {
-  margin: 5px;
+.logoSection {
+  position: absolute;
+  display: flex;
+  gap: 1rem;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.mobileNavHome {
+  display: none;
 }
 
 @media (max-width: 768px) {
@@ -103,17 +211,47 @@
     display: block;
   }
 
-  .mobileNavList {
+  .mobileNavHome {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileNavListContainer {
     position: absolute;
-    right: 0px;
+    right: 0;
     border-radius: 5%;
     -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    background-color: #fefdfa;
+    padding: 1.5rem;
+    background-color: var(--background-raised);
+  }
+
+  .mobileNavListContainerHome {
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    border-radius: 5%;
+    -webkit-box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 1px 2px 3px 1px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
+    background-color: var(--background-raised);
+  }
+
+  .mobileNavListFlex {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .navList {
+    display: none;
+  }
+
+  .navHome {
     display: none;
   }
 }

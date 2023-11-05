@@ -6,7 +6,6 @@ import Layout, { siteTitle } from "../components/layout";
 import styles from "../styles/Home.module.css";
 import Head from "next/head";
 
-
 // Exporting getStaticProps causes Next.js to pre-render the page at build time using the props returned by getStaticProps
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -27,10 +26,15 @@ export default function Notes({ allPostsData }) {
         <h2 className={utilStyles.headingLg}>Notes</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li
+              className={`${utilStyles.listItem} ${utilStyles.primaryText}`}
+              key={id}
+            >
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small
+                className={`${utilStyles.secondaryText} ${utilStyles.italic}`}
+              >
                 <Date dateString={date} />
               </small>
             </li>
