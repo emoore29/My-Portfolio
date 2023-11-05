@@ -109,14 +109,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .contactForm fieldset {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 500px;
+  max-width: 660px;
 }
 
 .contactForm label {
@@ -139,7 +139,7 @@
 
 .contactSubmitBtn {
   width: 100%;
-  max-width: 500px;
+  max-width: 660px;
   background-color: var(--primary);
   color: var(--background);
   font-size: 14px;
