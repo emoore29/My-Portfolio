@@ -7,9 +7,14 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("xoqzlllz");
   if (state.succeeded) {
     return (
-      <p className={styles.formThankYou}>
-        Thanks for your message! I will get back to you as soon as I can.
-      </p>
+      <Layout>
+        <h2 id="contact" className={utilStyles.headingMd}>
+          Contact
+        </h2>
+        <p className={styles.formThankYou}>
+          Thanks for your message! I will get back to you as soon as I can.
+        </p>
+      </Layout>
     );
   }
 

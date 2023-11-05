@@ -1,10 +1,10 @@
 import styles from "../styles/layout.module.css";
 import Link from "next/link";
 
-export default function Navigation() {
+export default function Navigation({ home }) {
   return (
-    <nav className={styles.navBar}>
-      <ul className={styles.navList}>
+    <nav className={home ? styles.navHome : styles.navBar}>
+      <ul className={home ? styles.navListHome : styles.navList}>
         <li>
           <Link href="/about">About</Link>
         </li>

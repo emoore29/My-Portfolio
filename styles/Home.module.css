@@ -43,7 +43,7 @@
 
 .portfolioImageWrapper {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   position: relative;
   width: 100%;
   aspect-ratio: 16/9;

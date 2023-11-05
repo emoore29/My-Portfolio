@@ -2,14 +2,20 @@ import styles from "../styles/layout.module.css";
 import Link from "next/link";
 import MenuIcon from "./icons/menuIcon";
 
-export default function MobileNavigation({ toggleMenu, isOpen }) {
+export default function MobileNavigation({ toggleMenu, isOpen, home }) {
   return (
-    <div className={styles.mobileNav}>
+    <div className={home ? styles.mobileNavHome : styles.mobileNav}>
       <button>
         <MenuIcon toggleMenu={toggleMenu} />
       </button>
       {isOpen && (
-        <nav className={styles.mobileNavListContainer}>
+        <nav
+          className={
+            home
+              ? styles.mobileNavListContainerHome
+              : styles.mobileNavListContainer
+          }
+        >
           <ul className={styles.mobileNavListFlex}>
             <li>
               <Link onClick={toggleMenu} href="/about">
