@@ -72,7 +72,7 @@ export default function Portfolio() {
                 width={500}
                 height={500}
                 alt="Picture of the author"
-                src={`/${project.src}`}
+                src={`/images/${project.src}`}
               />
               <p className={styles.projectName}>{project.title}</p>
               <p className={styles.projectTech}>{project.tech}</p>
