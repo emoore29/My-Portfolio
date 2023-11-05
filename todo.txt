@@ -1,5 +1,0 @@
-check accessibility - buttons focus outline, etc.
-check responsiveness
-polish MERN app for inclusion on website (use FEM projects until ready)
-DRY code 
-night mode
