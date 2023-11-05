@@ -5,6 +5,7 @@
   --primary: #b24d69;
   --primary-mono: #c17187;
   --secondary: 135, 120, 124;
+  --visited: #6c2f40;
   --secondary-light: #eeeced;
   --primary-contrast: #ed1e82;
   --text-main: #15090d;
@@ -51,7 +52,7 @@ a {
 }
 
 a:visited {
-  color: rgba(var(--secondary), 1);
+  color: var(--visited);
 }
 
 a:hover {
