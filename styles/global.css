@@ -4,7 +4,8 @@
 :root {
   --primary: #b24d69;
   --primary-mono: #c17187;
-  --secondary: #87787c;
+  --secondary: 135, 120, 124;
+  --secondary-light: #eeeced;
   --primary-contrast: #ed1e82;
   --text-main: #15090d;
   --background: #fefbfc;
@@ -41,6 +42,7 @@ p {
 ul {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 a {
@@ -49,7 +51,7 @@ a {
 }
 
 a:visited {
-  color: var(--secondary);
+  color: rgba(var(--secondary), 1);
 }
 
 a:hover {

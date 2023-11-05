@@ -15,7 +15,11 @@
   color: var(--primary);
   padding-bottom: 1rem;
   margin: 2rem auto 1rem;
-  background-image: radial-gradient(circle, var(--secondary), transparent 3px);
+  background-image: radial-gradient(
+    circle,
+    rgba(var(--secondary), 1),
+    transparent 3px
+  );
   background-position: -13px bottom;
   background-size: 37px 6px;
   background-repeat: repeat-x;
@@ -51,7 +55,7 @@ so the background width minus the radius of the dot, divided by 2 */
 }
 
 .subtitle {
-  color: var(--secondary);
+  color: rgba(var(--secondary), 1);
 }
 
 /* NAVBAR */

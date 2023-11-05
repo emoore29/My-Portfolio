@@ -61,7 +61,7 @@
 }
 
 .secondaryText {
-  color: var(--secondary);
+  color: rgba(var(--secondary), 1);
 }
 
 .primaryText {
