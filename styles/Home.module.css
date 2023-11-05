@@ -46,12 +46,14 @@
   align-items: start;
   position: relative;
   width: 100%;
+  aspect-ratio: 16/9;
   border-radius: 0.2rem;
   margin-bottom: 1rem;
   overflow: hidden;
   object-fit: contain;
   padding: 0.5rem;
-  box-shadow: rgba(var(--secondary), 0.2) 0px 7px 29px 0px;
+  box-shadow: 0 1px 1px rgba(var(--secondary), 0.12),
+    0 2px 2px rgba(var(--secondary), 0.12);
 }
 
 .projectDescription {
@@ -81,7 +83,7 @@
 @media (min-width: 1000px) {
   .projectContainer {
     flex-direction: row;
-    height: 293px;
+    height: 253px;
   }
 
   .portfolioImageWrapper {

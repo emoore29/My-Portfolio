@@ -50,7 +50,7 @@ export default function Portfolio() {
                 <div className={styles.portfolioImageWrapper}>
                   <Image
                     fill
-                    style={{ border: "1px solid green" }}
+                    style={{ objectFit: "contain" }}
                     alt={project.alt}
                     src={`/images/${project.src}`}
                   />
