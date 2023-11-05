@@ -20,8 +20,8 @@ export default function About() {
         technologies.
         <br />
         <br />
-        Outside of programming, I enjoy video games, running, and spending time
-        with family.
+        In my spare time I enjoy video games, running, and spending time with
+        family.
       </p>
     </Layout>
   );

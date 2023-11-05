@@ -21,7 +21,7 @@ export default function Layout({ children, home }) {
     <>
       <div className={styles.container}>
         <Head>
-          {/* <link rel="icon" href="/favicon.ico" /> Icon for future addition */}
+          <link rel="icon" href="/favicon.jsx" />
           <meta name="description" content="Emma Moore's web dev portfolio." />
           <meta
             property="og:image"
