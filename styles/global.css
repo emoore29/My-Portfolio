@@ -48,11 +48,11 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary);
+  color: var(--primary-contrast);
 }
 
 a:visited {
-  color: var(--visited);
+  color: var(--primary);
 }
 
 a:hover {
