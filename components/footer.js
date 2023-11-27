@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className={styles.socialsFooter}>
       <section className={styles.logoSection}>
-        <a target="_blank" href="https://github.com/AthenasCode">
+        <a target="_blank" href="https://github.com/emoore29">
           <GhIcon />
         </a>
         <a
