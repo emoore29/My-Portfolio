@@ -11,6 +11,28 @@ export default function Portfolio() {
 
   const projectLinks = [
     {
+      id: "donnapriceart",
+      github: null,
+      live: "https://donnapriceart.com/",
+      title: "Donna Price Art",
+      tech: "Next.js, Sanity, Vercel",
+      alt: "Screenshot of art portfolio website.",
+      description:
+        "An artist portfolio built with Next.js that uses Sanity as a headless CMS for website content management.",
+      src: "dp-portfolio-screenshot.jpg",
+    },
+    {
+      id: "norspac",
+      github: null,
+      live: "https://norspac.com/",
+      title: "Norspac",
+      tech: "Gatsby, Shopify, Netlify",
+      alt: "Screenshot of art portfolio website.",
+      description:
+        "An artist portfolio built with Gatsby that uses Shopify as a headless CMS for product management.",
+      src: "norspac.png",
+    },
+    {
       id: "manuscriptApp",
       github: "https://github.com/ShayneJG/Manuscript-Manager",
       live: "https://manuscript-manager.vercel.app/",
@@ -20,16 +42,6 @@ export default function Portfolio() {
       description: "An app that tracks monthly freelance earnings.",
       src: "manuscript-manager-screenshot.png",
     },
-    {
-      id: "artPortfolio",
-      github: null,
-      live: "https://donnapriceart.com/",
-      title: "Art Portfolio",
-      tech: "HTML, CSS, JS",
-      alt: "Art Portfolio",
-      description: "A six-page static website.",
-      src: "dp-portfolio-screenshot.jpg",
-    },
   ];
 
   return (
@@ -38,6 +50,12 @@ export default function Portfolio() {
         <h2 id="portfolio" className={utilStyles.headingMd}>
           Portfolio
         </h2>
+        <p>
+          Below are a few of my more significant projects. To view more of my
+          work, please <a href="https://github.com/emoore29">visit my GitHub</a>
+          .
+        </p>
+        <br />
         <ul className={styles.portfolioItems}>
           {projectLinks.map((project) => (
             <>
