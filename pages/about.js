@@ -5,12 +5,6 @@ import Layout from "../components/layout";
 export default function About() {
   return (
     <Layout>
-      <h2
-        id="about"
-        className={`${utilStyles.headingMd} ${styles.aboutHeading}`}
-      >
-        About
-      </h2>
       <p className={styles.aboutContent}>
         Hi, I'm Emma!
         <br />

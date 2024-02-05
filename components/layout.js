@@ -8,7 +8,6 @@ import MobileNavigation from "./mobileNavigation";
 import Footer from "./footer";
 import Link from "next/link";
 
-const name = "Emma Moore";
 export const siteTitle = "Emma Moore - Web Developer";
 
 export default function Layout({ children, home }) {
@@ -32,42 +31,10 @@ export default function Layout({ children, home }) {
           />
           <meta name="og:title" content={siteTitle} />
         </Head>
-        {!home ? (
-          <header className={styles.header}>
-            <h1
-              className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
-            >
-              <Link
-                href="/"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                {name}
-              </Link>
-            </h1>
-            <p
-              className={`${lora.className} ${utilStyles.italic} ${styles.title} ${styles.subtitle}`}
-            >
-              web developer
-            </p>
-            <Navigation />
-            <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} />
-          </header>
-        ) : (
-          <header className={`${styles.homeHeader}`}>
-            <section className={styles.homeTitle}>
-              <h1 className={`${utilStyles.heading2Xl} ${lora.className}`}>
-                {name}
-              </h1>
-              <p
-                className={`${lora.className} ${utilStyles.italic} ${styles.subtitle}`}
-              >
-                web developer
-              </p>
-            </section>
-            <Navigation home />
-            <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} home />
-          </header>
-        )}
+        <header className={styles.header}>
+          <Navigation />
+          <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} />
+        </header>
         <main className={home ? styles.homeContent : styles.content}>
           {children}
         </main>
