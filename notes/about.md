@@ -3,9 +3,6 @@ title: "A bit more about me"
 date: "2024-02-06"
 ---
 
-I'm inspired by people who are genuine about their experiences on the internet, so that's why I've decided to write this blog post. Being open and vulnerable on the internet may not be the wisest move, but without people willing to be genuine, everything is just meaningless noise.  
-&nbsp;  
-&nbsp;
 I started learning HTML, CSS, and JavaScript in late 2022 when I somewhat spontaneously decided it was time to learn programming. I'd often thought about it, but maybe it took getting to my late 20s to realise that life doesn't wait around for you to do these things.  
 &nbsp;  
 &nbsp;

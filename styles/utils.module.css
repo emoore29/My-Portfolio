@@ -54,6 +54,7 @@
 
 .secondaryText {
   color: rgba(var(--secondary), 1);
+  font-size: 14px;
 }
 
 .primaryText {

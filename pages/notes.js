@@ -19,9 +19,6 @@ export async function getStaticProps() {
 export default function Notes({ allPostsData }) {
   return (
     <Layout>
-      <Head>
-        <title>{siteTitle}</title>
-      </Head>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
@@ -40,9 +37,6 @@ export default function Notes({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <div className={`${styles.backToHome} ${styles.backBtn}`}>
-        <Link href="/">← Back to home</Link>
-      </div>
     </Layout>
   );
 }

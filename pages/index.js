@@ -5,8 +5,6 @@ import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const [activeProject, setActiveProject] = useState(null);
-
   const projectLinks = [
     {
       id: "donnapriceart",
@@ -17,7 +15,18 @@ export default function Home() {
       alt: "Screenshot of art portfolio website.",
       description:
         "An artist portfolio built with Next.js that uses Sanity as a headless CMS for website content management.",
-      src: "dp-portfolio-screenshot.jpg",
+      src: "dpa.png",
+    },
+    {
+      id: "acpd",
+      github: "https://github.com/emoore29/acpd",
+      live: "https://norspac.com/",
+      title: "Accessible Colour Palette Designer",
+      tech: "Next.js, TypeScript",
+      alt: "Screenshot of acpd.",
+      description:
+        "A tool for developers and designers to help create colour palettes with accessible contrasts.",
+      src: "acpd.png",
     },
     {
       id: "norspac",
@@ -30,16 +39,6 @@ export default function Home() {
         "An artist portfolio built with Gatsby that uses Shopify as a headless CMS for product management.",
       src: "norspac.png",
     },
-    {
-      id: "manuscriptApp",
-      github: "https://github.com/ShayneJG/Manuscript-Manager",
-      live: "https://manuscript-manager.vercel.app/",
-      title: "Manuscript Manager",
-      tech: "Next.js, Auth0",
-      alt: "Manuscript Manager",
-      description: "An app that tracks monthly freelance earnings.",
-      src: "manuscript-manager-screenshot.png",
-    },
   ];
 
   return (
@@ -49,8 +48,6 @@ export default function Home() {
           {projectLinks.map((project) => (
             <li
               id={project.id}
-              onMouseOver={() => setActiveProject(project.id)}
-              onMouseOut={() => setActiveProject(null)}
               className={styles.projectContainer}
               key={`${project.name} + ${project.id}`}
             >
@@ -68,7 +65,7 @@ export default function Home() {
                 <p className={styles.projectDescription}>
                   {project.description}
                 </p>
-                <nav className={styles.projectLinks}>
+                <div className={styles.projectLinks}>
                   <ul>
                     {project.github && (
                       <li>
@@ -81,7 +78,7 @@ export default function Home() {
                       </li>
                     )}
                   </ul>
-                </nav>
+                </div>
               </section>
             </li>
           ))}

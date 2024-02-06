@@ -13,24 +13,6 @@ export default function Navigation() {
     <nav className={styles.navBar}>
       <ul className={styles.navList}>
         <li>
-          <Link
-            href="/"
-            className={pathName == "/" ? `${styles.activeLink}` : ""}
-          >
-            work
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/notes"
-            className={
-              pathName.startsWith("/notes") ? `${styles.activeLink}` : ""
-            }
-          >
-            notes
-          </Link>
-        </li>
-        <li>
           <Link href="/">
             <div className={styles.svg}>
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="-15 -15 30 30">
@@ -60,10 +42,20 @@ export default function Navigation() {
         </li>
         <li>
           <Link
-            href="/contact"
-            className={pathName == "/contact" ? `${styles.activeLink}` : ""}
+            href="/"
+            className={pathName == "/" ? `${styles.activeLink}` : ""}
           >
-            contact
+            work
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/notes"
+            className={
+              pathName.startsWith("/notes") ? `${styles.activeLink}` : ""
+            }
+          >
+            notes
           </Link>
         </li>
       </ul>
