@@ -23,7 +23,7 @@
 
 /* NAVBAR */
 .activeLink {
-  color: var(--link-active) !important;
+  color: var(--link) !important;
   text-decoration: underline;
 }
 
@@ -50,11 +50,11 @@
 }
 
 .navList a {
-  color: var(--link);
+  color: var(--primary);
 }
 
 .navList a:hover {
-  color: var(--link-hover);
+  color: var(--link);
   text-decoration: underline;
 }
 

@@ -3,10 +3,9 @@
 
 :root {
   --primary: #161616;
+  --secondary: #575757;
   --background: #fefefe;
   --link: #465945;
-  --link-hover: #7b637e;
-  --link-active: #7b637e;
 }
 
 html,
@@ -35,15 +34,15 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--link);
+  color: var(--primary);
 }
 
 a:visited {
-  color: var(--link);
+  color: var(--primary);
 }
 
 a:hover {
-  color: var(--link-hover);
+  color: var(--link);
   text-decoration: underline;
 }
 

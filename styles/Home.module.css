@@ -75,7 +75,7 @@
 }
 
 .projectTech {
-  color: rgba(var(--secondary), 1);
+  color: var(--secondary);
   font-size: 16px;
   font-style: italic;
 }
