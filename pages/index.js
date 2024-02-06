@@ -47,45 +47,43 @@ export default function Home() {
       <section className={styles.portfolioContainer}>
         <ul className={styles.portfolioItems}>
           {projectLinks.map((project) => (
-            <>
-              <li
-                id={project.id}
-                onMouseOver={() => setActiveProject(project.id)}
-                onMouseOut={() => setActiveProject(null)}
-                className={styles.projectContainer}
-              >
-                <div className={styles.portfolioImageWrapper}>
-                  <Image
-                    fill
-                    style={{ objectFit: "contain" }}
-                    alt={project.alt}
-                    src={`/images/${project.src}`}
-                  />
-                </div>
-                {/* <p>View details... dropdown coming soonTM</p> */}
-                <section className={styles.projectInfo}>
-                  <p className={styles.projectName}>{project.title}</p>
-                  <p className={styles.projectTech}>{project.tech}</p>
-                  <p className={styles.projectDescription}>
-                    {project.description}
-                  </p>
-                  <nav className={styles.projectLinks}>
-                    <ul>
-                      {project.github && (
-                        <li>
-                          <Link href={project.github}>View on Github</Link>
-                        </li>
-                      )}
-                      {project.live && (
-                        <li>
-                          <Link href={project.live}>View live</Link>
-                        </li>
-                      )}
-                    </ul>
-                  </nav>
-                </section>
-              </li>
-            </>
+            <li
+              id={project.id}
+              onMouseOver={() => setActiveProject(project.id)}
+              onMouseOut={() => setActiveProject(null)}
+              className={styles.projectContainer}
+              key={`${project.name} + ${project.id}`}
+            >
+              <div className={styles.portfolioImageWrapper}>
+                <Image
+                  fill
+                  style={{ objectFit: "contain" }}
+                  alt={project.alt}
+                  src={`/images/${project.src}`}
+                />
+              </div>
+              <section className={styles.projectInfo}>
+                <p className={styles.projectName}>{project.title}</p>
+                <p className={styles.projectTech}>{project.tech}</p>
+                <p className={styles.projectDescription}>
+                  {project.description}
+                </p>
+                <nav className={styles.projectLinks}>
+                  <ul>
+                    {project.github && (
+                      <li>
+                        <Link href={project.github}>View on Github</Link>
+                      </li>
+                    )}
+                    {project.live && (
+                      <li>
+                        <Link href={project.live}>View live</Link>
+                      </li>
+                    )}
+                  </ul>
+                </nav>
+              </section>
+            </li>
           ))}
         </ul>
       </section>

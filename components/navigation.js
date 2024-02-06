@@ -1,8 +1,8 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "../styles/layout.module.css";
-import Link from "next/link";
 
-export default function Navigation({ home }) {
+export default function Navigation() {
   const router = useRouter();
 
   const pathName = router.pathname;
@@ -17,15 +17,17 @@ export default function Navigation({ home }) {
             href="/"
             className={pathName == "/" ? `${styles.activeLink}` : ""}
           >
-            Work
+            work
           </Link>
         </li>
         <li>
           <Link
             href="/notes"
-            className={pathName == "/notes" ? `${styles.activeLink}` : ""}
+            className={
+              pathName.startsWith("/notes") ? `${styles.activeLink}` : ""
+            }
           >
-            Notes
+            notes
           </Link>
         </li>
         <li>
@@ -40,7 +42,7 @@ export default function Navigation({ home }) {
                 />
                 <path
                   d="M -5 -11 A 1 1 0 0 0 -5 -14 A 1 1 0 0 0 -5 -11"
-                  stroke="#B06176"
+                  stroke="#000000"
                   stroke-width="1"
                   fill="none"
                 />
@@ -53,7 +55,7 @@ export default function Navigation({ home }) {
             href="/about"
             className={pathName == "/about" ? `${styles.activeLink}` : ""}
           >
-            About
+            about
           </Link>
         </li>
         <li>
@@ -61,7 +63,7 @@ export default function Navigation({ home }) {
             href="/contact"
             className={pathName == "/contact" ? `${styles.activeLink}` : ""}
           >
-            Contact
+            contact
           </Link>
         </li>
       </ul>

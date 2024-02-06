@@ -29,7 +29,7 @@ export default function Notes({ allPostsData }) {
               className={`${utilStyles.listItem} ${utilStyles.primaryText}`}
               key={id}
             >
-              <Link href={`/posts/${id}`}>{title}</Link>
+              <Link href={`/notes/${id}`}>{title}</Link>
               <br />
               <small
                 className={`${utilStyles.secondaryText} ${utilStyles.italic}`}

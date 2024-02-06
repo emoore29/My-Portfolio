@@ -1,18 +1,11 @@
 import Head from "next/head";
-import { useState } from "react";
 import styles from "../styles/layout.module.css";
 import Footer from "./footer";
 import Navigation from "./navigation";
 
-export const siteTitle = "Emma Moore - Web Developer";
+export const siteTitle = "Emma Moore";
 
-export default function Layout({ children, home }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+export default function Layout({ children }) {
   return (
     <>
       <div className={styles.container}>

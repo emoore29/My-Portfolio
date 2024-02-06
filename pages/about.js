@@ -1,21 +1,31 @@
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
+import styles from "../styles/Home.module.css";
 
 export default function About() {
   return (
     <Layout>
       <p className={styles.aboutContent}>
-        Hi, I'm Emma!
+        Welcome to my website!
         <br />
         <br />
-        I'm a web developer with experience primarily in frontend React and
-        interests in UI/UX, backend integration, and learning other
-        technologies.
+        <strong>About me</strong>
         <br />
         <br />
-        In my spare time I enjoy video games, running, and spending time with
-        family.
+        Here you can find my portfolio and a collection of "notes" about what
+        I'm learning working as a web developer.
+        <br />
+        <br />
+        <strong>What do I do?</strong>
+        <br />
+        <br />
+        I build websites, predominantly on the front end with React. I'm
+        interested in UI/UX, backend integration, and exploring new languages
+        and technologies.
+        <br />
+        <br />
+        With my own projects, I like experimenting and trying to think outside
+        the box. If you would like to know more about me and my story, I've
+        written a blog post about it <a href="">here</a>.
       </p>
     </Layout>
   );
