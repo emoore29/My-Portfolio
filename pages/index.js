@@ -1,10 +1,8 @@
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Layout from "../components/layout";
-import Link from "next/link";
-import ListItem from "../components/icons/listIcon";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   const [activeProject, setActiveProject] = useState(null);

@@ -1,15 +1,32 @@
+import { useRouter } from "next/router";
 import styles from "../styles/layout.module.css";
 import Link from "next/link";
 
 export default function Navigation({ home }) {
+  const router = useRouter();
+
+  const pathName = router.pathname;
+
+  console.log(pathName);
+
   return (
     <nav className={styles.navBar}>
       <ul className={styles.navList}>
         <li>
-          <Link href="/">Work</Link>
+          <Link
+            href="/"
+            className={pathName == "/" ? `${styles.activeLink}` : ""}
+          >
+            Work
+          </Link>
         </li>
         <li>
-          <Link href="/notes">Notes</Link>
+          <Link
+            href="/notes"
+            className={pathName == "/notes" ? `${styles.activeLink}` : ""}
+          >
+            Notes
+          </Link>
         </li>
         <li>
           <Link href="/">
@@ -32,10 +49,20 @@ export default function Navigation({ home }) {
           </Link>
         </li>
         <li>
-          <Link href="/about">About</Link>
+          <Link
+            href="/about"
+            className={pathName == "/about" ? `${styles.activeLink}` : ""}
+          >
+            About
+          </Link>
         </li>
         <li>
-          <Link href="/contact">Contact</Link>
+          <Link
+            href="/contact"
+            className={pathName == "/contact" ? `${styles.activeLink}` : ""}
+          >
+            Contact
+          </Link>
         </li>
       </ul>
     </nav>

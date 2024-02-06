@@ -10,7 +10,6 @@
   --primary-contrast: #ed1e82;
   --text-main: #15090d;
   --background: #fefbfc;
-  --background-secondary: #fcf2f6;
   --background-raised: #ffffff;
 }
 
@@ -18,7 +17,6 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Lora", sans-serif;
   color: var(--text-main);
   font-size: 18px;
   background-color: var(--background);
@@ -72,10 +70,6 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-}
-
-button:hover {
-  color: var(--background-raised);
 }
 
 fieldset {

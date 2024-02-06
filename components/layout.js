@@ -1,12 +1,8 @@
 import Head from "next/head";
-import styles from "../styles/layout.module.css";
-import utilStyles from "../styles/utils.module.css";
 import { useState } from "react";
-import { lora } from "../styles/fonts";
-import Navigation from "./navigation";
-import MobileNavigation from "./mobileNavigation";
+import styles from "../styles/layout.module.css";
 import Footer from "./footer";
-import Link from "next/link";
+import Navigation from "./navigation";
 
 export const siteTitle = "Emma Moore - Web Developer";
 
@@ -33,11 +29,8 @@ export default function Layout({ children, home }) {
         </Head>
         <header className={styles.header}>
           <Navigation />
-          <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} />
         </header>
-        <main className={home ? styles.homeContent : styles.content}>
-          {children}
-        </main>
+        <main className={styles.content}>{children}</main>
         <Footer />
       </div>
     </>
