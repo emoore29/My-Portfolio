@@ -1,27 +1,22 @@
-import utilStyles from "../styles/utils.module.css";
-import styles from "../styles/Home.module.css";
 import Layout from "../components/layout";
+import styles from "../styles/Home.module.css";
 
 export default function About() {
   return (
     <Layout>
-      <h2
-        id="about"
-        className={`${utilStyles.headingMd} ${styles.aboutHeading}`}
-      >
-        About
-      </h2>
       <p className={styles.aboutContent}>
-        Hi, I'm Emma!
+        Welcome!
         <br />
         <br />
-        I'm a web developer with experience primarily in frontend React and
-        interests in UI/UX, backend integration, and learning other
-        technologies.
+        I'm a web developer based in Perth, Australia. I enjoy building things
+        that are some combination of creative and practical. In my spare time, I
+        enjoy running, drawing, and spending time with friends and family. Here,
+        you can find my work and a collection of "notes", mostly about web
+        development.
         <br />
-        <br />
-        In my spare time I enjoy video games, running, and spending time with
-        family.
+        <br />I build websites, predominantly on the front end with React. I'm
+        interested in UI/UX, backend integration, and exploring new languages
+        and technologies.
       </p>
     </Layout>
   );

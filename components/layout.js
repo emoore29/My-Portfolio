@@ -1,23 +1,11 @@
 import Head from "next/head";
 import styles from "../styles/layout.module.css";
-import utilStyles from "../styles/utils.module.css";
-import { useState } from "react";
-import { lora } from "../styles/fonts";
-import Navigation from "./navigation";
-import MobileNavigation from "./mobileNavigation";
 import Footer from "./footer";
-import Link from "next/link";
+import Navigation from "./navigation";
 
-const name = "Emma Moore";
-export const siteTitle = "Emma Moore - Web Developer";
+export const siteTitle = "Emma Moore";
 
-export default function Layout({ children, home }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
+export default function Layout({ children }) {
   return (
     <>
       <div className={styles.container}>
@@ -32,45 +20,10 @@ export default function Layout({ children, home }) {
           />
           <meta name="og:title" content={siteTitle} />
         </Head>
-        {!home ? (
-          <header className={styles.header}>
-            <h1
-              className={`${utilStyles.headingXl} ${lora.className} ${styles.name}`}
-            >
-              <Link
-                href="/"
-                style={{ textDecoration: "none", color: "inherit" }}
-              >
-                {name}
-              </Link>
-            </h1>
-            <p
-              className={`${lora.className} ${utilStyles.italic} ${styles.title} ${styles.subtitle}`}
-            >
-              web developer
-            </p>
-            <Navigation />
-            <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} />
-          </header>
-        ) : (
-          <header className={`${styles.homeHeader}`}>
-            <section className={styles.homeTitle}>
-              <h1 className={`${utilStyles.heading2Xl} ${lora.className}`}>
-                {name}
-              </h1>
-              <p
-                className={`${lora.className} ${utilStyles.italic} ${styles.subtitle}`}
-              >
-                web developer
-              </p>
-            </section>
-            <Navigation home />
-            <MobileNavigation isOpen={isOpen} toggleMenu={toggleMenu} home />
-          </header>
-        )}
-        <main className={home ? styles.homeContent : styles.content}>
-          {children}
-        </main>
+        <header className={styles.header}>
+          <Navigation />
+        </header>
+        <main className={styles.content}>{children}</main>
         <Footer />
       </div>
     </>

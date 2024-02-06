@@ -53,7 +53,8 @@
 }
 
 .secondaryText {
-  color: rgba(var(--secondary), 1);
+  color: var(--secondary);
+  font-size: 14px;
 }
 
 .primaryText {

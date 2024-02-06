@@ -2,24 +2,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
 :root {
-  --primary: #b24d69;
-  --primary-mono: #c17187;
-  --secondary: 135, 120, 124;
-  --visited: #6c2f40;
-  --secondary-light: #eeeced;
-  --primary-contrast: #ed1e82;
-  --text-main: #15090d;
-  --background: #fefbfc;
-  --background-secondary: #fcf2f6;
-  --background-raised: #ffffff;
+  --primary: #161616;
+  --secondary: #575757;
+  --background: #fefefe;
+  --link: #465945;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Lora", sans-serif;
-  color: var(--text-main);
+  color: var(--primary);
   font-size: 18px;
   background-color: var(--background);
 }
@@ -27,13 +20,6 @@ body {
 * {
   box-sizing: border-box;
 }
-
-/* hr {
-  width: 20%;
-  margin: 0 0 3rem 0;
-  color: var(--secondary);
-  border-top: dotted 1px;
-} */
 
 h1,
 p {
@@ -48,7 +34,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--primary-contrast);
+  color: var(--primary);
 }
 
 a:visited {
@@ -56,7 +42,8 @@ a:visited {
 }
 
 a:hover {
-  color: var(--primary-contrast);
+  color: var(--link);
+  text-decoration: underline;
 }
 
 img {
@@ -72,10 +59,6 @@ button {
   font: inherit;
   cursor: pointer;
   outline: inherit;
-}
-
-button:hover {
-  color: var(--background-raised);
 }
 
 fieldset {

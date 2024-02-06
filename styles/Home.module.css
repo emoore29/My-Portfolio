@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 /* ABOUT SECTION */
 .aboutContainer {
   /* display: grid;
@@ -27,38 +29,40 @@
 /* PORTFOLIO SECTION */
 
 .portfolioContainer {
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
 }
 
 .portfolioItems {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .projectContainer {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .portfolioImageWrapper {
-  display: flex;
-  align-items: flex-start;
   position: relative;
-  width: 100%;
-  aspect-ratio: 16/9;
-  border-radius: 0.2rem;
-  margin-bottom: 1rem;
+  min-width: 200px;
+  max-width: 200px;
+  height: 113px;
   overflow: hidden;
-  object-fit: contain;
-  padding: 0.5rem;
-  box-shadow: 0 1px 1px rgba(var(--secondary), 0.12),
-    0 2px 2px rgba(var(--secondary), 0.12);
+  border: 2px solid #46594526;
+  border-radius: 6px;
+  margin: 0 auto 1rem;
 }
 
 .projectDescription {
   font-size: 16px;
   color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.projectTech {
+  padding: 0 0 1rem;
 }
 
 .projectTech {
@@ -71,7 +75,7 @@
 }
 
 .projectTech {
-  color: rgba(var(--secondary), 1);
+  color: var(--secondary);
   font-size: 16px;
   font-style: italic;
 }
@@ -80,83 +84,32 @@
   font-size: 16px;
 }
 
-@media (min-width: 1000px) {
+.projectInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.2rem 1rem;
+}
+
+@media (min-width: 490px) {
   .projectContainer {
     flex-direction: row;
-    height: 253px;
   }
 
   .portfolioImageWrapper {
-    width: 50%;
-    margin-bottom: 0;
+    margin: 0 0 1rem;
   }
 
   .projectInfo {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 50%;
-    padding: 0.2rem 1rem;
+    width: 65%;
   }
-
-  .projectLinks {
-    margin-top: auto;
-  }
-}
-
-/* CONTACT FORM */
-.contactForm {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contactForm fieldset {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 660px;
-}
-
-.contactForm label {
-  display: inline-block;
-  font-size: 14px;
-}
-
-.contactForm input,
-.contactForm textarea {
-  border: none;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-  flex-grow: 1;
-  border-radius: 5px;
-}
-
-.contactForm textarea {
-  height: 5rem;
-}
-
-.contactSubmitBtn {
-  width: 100%;
-  max-width: 660px;
-  background-color: var(--primary);
-  color: var(--background);
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-.formThankYou {
-  font-size: 14px;
-  font-family: Lora, serif;
-  font-style: italic;
-  text-align: center;
 }
 
 /* BLOG STYLING */
 
 .blogTitleAndDate {
-  margin: 1rem 0;
+  margin: 0 0 1rem;
+  font-style: italic;
 }
 
 .notes {
@@ -201,4 +154,14 @@
   .contactForm textarea {
     width: 100%;
   }
+}
+
+.noteTitle {
+  margin: 0;
+  padding: 0;
+  font-size: large;
+}
+
+.noteDate {
+  margin: 0;
 }

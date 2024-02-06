@@ -31,9 +31,7 @@ export default function Post({ postData }) {
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={`${utilStyles.headingMd} ${styles.blogTitleAndDate}`}>
-          {postData.title}
-        </h1>
+        <h1 className={styles.noteTitle}>{postData.title}</h1>
         <div
           className={`${utilStyles.secondaryText}  ${styles.blogTitleAndDate}`}
         >
