@@ -13,8 +13,8 @@ export default function About() {
           work on meaningful projects and build a career writing quality code.
         </p>
         <p>
-          Outside of web development, I enjoy running, drawing, and spending
-          time with friends and family. I'm a big fan of{" "}
+          Outside of work and programming, I enjoy running, drawing, and
+          spending time with friends and family. I'm a big fan of{" "}
           <a href="https://critrole.com/" target="_blank">
             Critical Role
           </a>{" "}
