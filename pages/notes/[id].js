@@ -35,7 +35,7 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
         <div
-          className={`${styles.notes} ${lora.className}`}
+          className={`${styles.notes}`}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>

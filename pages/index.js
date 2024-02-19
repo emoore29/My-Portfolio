@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Layout from "../components/layout";
 import styles from "../styles/Home.module.css";
+import LinkIcon from "../components/icons/LinkIcon";
 
 export default function Home() {
   const projectLinks = [
@@ -13,8 +14,7 @@ export default function Home() {
       title: "Donna Price Art",
       tech: "Next.js, Sanity, Vercel",
       alt: "Screenshot of art portfolio website.",
-      description:
-        "An artist portfolio built with Next.js that uses Sanity as a headless CMS for website content management.",
+      description: "Artist portfolio.",
       src: "dpa.png",
     },
     {
@@ -25,7 +25,7 @@ export default function Home() {
       tech: "Next.js, TypeScript",
       alt: "Screenshot of acpd.",
       description:
-        "A tool for developers and designers to help create colour palettes with accessible contrasts.",
+        "Tool to assist developers and designers in creating colour palettes with accessible contrasts.",
       src: "acpd.png",
     },
     {
@@ -35,8 +35,7 @@ export default function Home() {
       title: "Norspac",
       tech: "Gatsby, Shopify, Netlify",
       alt: "Screenshot of art portfolio website.",
-      description:
-        "An artist portfolio built with Gatsby that uses Shopify as a headless CMS for product management.",
+      description: "Artist portfolio and store.",
       src: "norspac.png",
     },
   ];
@@ -69,12 +68,22 @@ export default function Home() {
                   <ul>
                     {project.github && (
                       <li>
-                        <Link href={project.github}>View on Github</Link>
+                        <Link href={project.github} target="_blank">
+                          View on Github{" "}
+                          <div className={styles.linkIcon}>
+                            <LinkIcon />
+                          </div>
+                        </Link>
                       </li>
                     )}
                     {project.live && (
                       <li>
-                        <Link href={project.live}>View live</Link>
+                        <Link href={project.live} target="_blank">
+                          View live{" "}
+                          <div className={styles.linkIcon}>
+                            <LinkIcon />
+                          </div>
+                        </Link>
                       </li>
                     )}
                   </ul>

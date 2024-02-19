@@ -6,12 +6,11 @@ export default function About() {
     <Layout>
       <div className={styles.aboutContent}>
         <p>
-          Welcome to my website! I'm a web developer based in Perth, Australia.
-          I enjoy building things that are both creative and practical. I've
-          also always loved puzzle games and problem solving. It's probably some
-          combination of these things that led me to web development. Here, you
-          can find my work and a collection of "notes", mostly about web
-          development.
+          Welcome to my website! My name is Emma, and I live in Perth, Western
+          Australia. I enjoy building things that are both creative and
+          practical. I currently work as a freelance transcriptionist and
+          editor, and I do a lot of programming in my spare time. My goal is to
+          work on meaningful projects and build a career writing quality code.
         </p>
         <p>
           Outside of web development, I enjoy running, drawing, and spending
@@ -25,14 +24,14 @@ export default function About() {
           too long at my PC.
         </p>
         <p>
-          The illustrations you see on my website are made by{" "}
+          I designed and developed this website and it is a continual work in
+          progress. The illustrations you see on my website are made by{" "}
           <a href="https://www.transhumans.xyz/about" target="_blank">
             Pablo Stanley
           </a>
-          , who generously shares their art for free. I designed and built the
-          website and logo myself.
+          , who generously shares their art for free.
         </p>
-        <figure className={styles.aboutImg}>
+        <figure className={styles.illustration}>
           <img
             src="/images/puppy-transhumans.png"
             alt="A girl hugging a puppy."

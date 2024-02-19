@@ -37,15 +37,17 @@ export default function Notes({ allPostsData }) {
           ))}
         </ul>
       </section>
-      <figure className={styles.notesImg}>
-        <img
-          src="/images/transhumans.png"
-          alt="A boy and a girl sharing ideas."
-        />
-        <figcaption className={styles.caption}>
-          <a href="https://www.transhumans.xyz/about">By Pablo Stanley</a>
-        </figcaption>
-      </figure>
+      <div className={styles.flexCol}>
+        <figure className={styles.illustration}>
+          <img
+            src="/images/transhumans.png"
+            alt="A boy and a girl sharing ideas."
+          />
+          <figcaption className={styles.caption}>
+            <a href="https://www.transhumans.xyz/about">By Pablo Stanley</a>
+          </figcaption>
+        </figure>
+      </div>
     </Layout>
   );
 }

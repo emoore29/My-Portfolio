@@ -5,7 +5,8 @@
   --primary: #161616;
   --secondary: #575757;
   --background: #fefefe;
-  --link: #465945;
+  --green: 56, 104, 55;
+  --purple: 159, 74, 165;
 }
 
 html,
@@ -33,16 +34,14 @@ ul {
 }
 
 a {
+  color: rgb(var(--green));
+  font-style: italic;
   text-decoration: none;
-  color: var(--primary);
-}
-
-a:visited {
-  color: var(--primary);
 }
 
 a:hover {
-  color: var(--link);
+  color: rgba(var(--purple));
+  font-style: italic;
   text-decoration: underline;
 }
 

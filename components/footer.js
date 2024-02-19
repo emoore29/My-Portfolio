@@ -6,9 +6,6 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <section className={styles.footerContent}>
-        <p>
-          <em>Emma Moore 2024</em>
-        </p>
         <div className={styles.socials}>
           <a target="_blank" href="https://github.com/emoore29">
             <GhIcon />
@@ -23,6 +20,7 @@ export default function Footer() {
             />
           </a>
         </div>
+        <p className={styles.copyright}>© Emma Moore 2024</p>
       </section>
     </footer>
   );

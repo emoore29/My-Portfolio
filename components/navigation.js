@@ -45,7 +45,7 @@ export default function Navigation() {
             href="/"
             className={pathName == "/" ? `${styles.activeLink}` : ""}
           >
-            work
+            projects
           </Link>
         </li>
         <li>

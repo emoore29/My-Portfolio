@@ -6,12 +6,34 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-size: 16px;
 }
 
-.aboutImg {
-  max-width: 30%;
-  align-self: flex-end;
+.illustration {
+  max-width: 80%;
+  align-self: center;
   margin: 0;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  .illustration {
+    max-width: 45%;
+    align-self: flex-end;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .illustration {
+    max-width: 30%;
+    align-self: flex-end;
+    margin: 0;
+  }
 }
 
 .caption {
@@ -43,7 +65,7 @@
   max-width: 200px;
   height: 113px;
   overflow: hidden;
-  border: 2px solid #46594526;
+  border: 1px solid rgba(var(--green), 0.2);
   border-radius: 6px;
   margin: 0 auto 1rem;
 }
@@ -65,6 +87,7 @@
 .projectName {
   color: var(--primary);
   font-size: 18px;
+  font-weight: 500;
 }
 
 .projectTech {
@@ -82,6 +105,11 @@
   flex-direction: column;
   width: 100%;
   padding: 0.2rem 0;
+}
+
+.linkIcon {
+  display: inline-block;
+  width: 15px;
 }
 
 @media (min-width: 490px) {
@@ -153,7 +181,8 @@
 .noteTitle {
   margin: 0;
   padding: 0;
-  font-size: large;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .noteDate {
