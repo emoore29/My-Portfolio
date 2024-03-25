@@ -6,11 +6,11 @@ export default function About() {
     <Layout>
       <div className={styles.aboutContent}>
         <p>
-          Welcome to my website! My name is Emma, and I live in Perth, Western
-          Australia. I enjoy building things that are both creative and
-          practical. I currently work as a freelance transcriptionist and
-          editor, and I do a lot of programming in my spare time. My goal is to
-          work on meaningful projects and build a career writing quality code.
+          My name is Emma, and I live in Perth, Western Australia. I currently
+          work as a freelance transcriptionist and editor, and I do a lot of
+          programming in my spare time. My goal is to continue learning new
+          skills, work on meaningful projects, and build a fulfilling career in
+          technology.
         </p>
         <p>
           Outside of work and programming, I enjoy running, drawing, and
