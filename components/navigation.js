@@ -45,10 +45,10 @@ export default function Navigation() {
             href="/"
             className={pathName == "/" ? `${styles.activeLink}` : ""}
           >
-            projects
+            my work
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             href="/notes"
             className={
@@ -57,7 +57,7 @@ export default function Navigation() {
           >
             notes
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

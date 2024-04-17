@@ -7,11 +7,12 @@ export default function About() {
       <div className={styles.aboutContent}>
         <p>
           My name is Emma, and I live in Perth, Western Australia. I currently
-          work as a freelance transcriptionist and editor, and I do a lot of
-          programming in my spare time. My goal is to continue learning new
-          skills, work on meaningful projects, and build a fulfilling career in
-          technology.
+          work as a freelance document editor and writer, working on a range of
+          documents from legal transcripts to research manuscripts. I enjoy
+          learning about technology and have worked on a variety of web
+          development and home networking projects.
         </p>
+
         <p>
           Outside of work and programming, I enjoy running, drawing, and
           spending time with friends and family. I'm a big fan of{" "}
@@ -24,12 +25,12 @@ export default function About() {
           too long at my PC.
         </p>
         <p>
-          I designed and developed this website and it is a continual work in
-          progress. The illustrations you see on my website are made by{" "}
+          I designed and developed this website. The artwork you see on my
+          website is made by{" "}
           <a href="https://www.transhumans.xyz/about" target="_blank">
             Pablo Stanley
           </a>
-          , who generously shares their art for free.
+          .
         </p>
         <figure className={styles.illustration}>
           <img
@@ -37,7 +38,7 @@ export default function About() {
             alt="A girl hugging a puppy."
           />
           <figcaption className={styles.caption}>
-            <a href="https://www.transhumans.xyz/about">By Pablo Stanley</a>
+            <a href="https://www.transhumans.xyz/about">Transhumans</a>
           </figcaption>
         </figure>
       </div>
