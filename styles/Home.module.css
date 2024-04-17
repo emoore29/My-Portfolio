@@ -57,17 +57,31 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  /* background-color: #faf3fa98; */
 }
 
 .portfolioImageWrapper {
   position: relative;
-  min-width: 200px;
-  max-width: 200px;
-  height: 113px;
+  min-width: 150px;
+  max-width: 150px;
+  height: 85px;
   overflow: hidden;
   border: 1px solid rgba(var(--green), 0.2);
   border-radius: 6px;
   margin: 0 auto 1rem;
+}
+
+.docsImageWrapper {
+  position: relative;
+  min-width: 80px;
+  max-width: 80px;
+  height: 85px;
+  overflow: hidden;
+  border: 1px solid rgba(var(--green), 0.2);
+  border-radius: 6px;
+  margin: 0;
 }
 
 .projectDescription {
@@ -102,6 +116,7 @@
 
 .projectInfo {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   width: 100%;
   padding: 0.2rem 0;

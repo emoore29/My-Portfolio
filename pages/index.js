@@ -14,7 +14,7 @@ export default function Home() {
       tech: "Next.js, TypeScript",
       alt: "Screenshot of acpd.",
       description:
-        "Tool to assist developers and designers in creating colour palettes with accessible contrasts.",
+        "A tool to assist developers and designers in creating colour palettes with accessible contrasts.",
       src: "acpd.png",
     },
     {
@@ -24,20 +24,21 @@ export default function Home() {
       title: "Donna Price Art",
       tech: "Next.js, Sanity, Vercel",
       alt: "Screenshot of art portfolio website.",
-      description: "Artist portfolio.",
+      description:
+        "An Australian artist's portfolio that includes client customisation with Sanity Studio.",
       src: "dpa.png",
     },
 
-    {
-      id: "norspac",
-      github: null,
-      live: "https://norspac.com/",
-      title: "Norspac",
-      tech: "Gatsby, Shopify, Netlify",
-      alt: "Screenshot of art portfolio website.",
-      description: "Artist portfolio and store.",
-      src: "norspac.png",
-    },
+    // {
+    //   id: "norspac",
+    //   github: null,
+    //   live: "https://norspac.com/",
+    //   title: "Norspac",
+    //   tech: "Gatsby, Shopify, Netlify",
+    //   alt: "Screenshot of art portfolio website.",
+    //   description: "Artist portfolio and store.",
+    //   src: "norspac.png",
+    // },
   ];
 
   const docsLinks = [
@@ -45,8 +46,7 @@ export default function Home() {
       id: "columncounttester",
       github: "https://github.com/emoore29/Column-Count-Tester",
       live: "https://emoore29.github.io/Column-Count-Tester/",
-      title:
-        "Case study of cross-browser compatibility: CSS's Column-Count property",
+      title: "Column-count tester",
       tech: null,
       alt: "Screenshot of column-count tester page.",
       description:
@@ -61,24 +61,25 @@ export default function Home() {
       tech: null,
       alt: "Screenshot of report.",
       description:
-        "An after action review to support team development after a community incident.",
+        "An after action review written to support team development after a community incident.",
       src: "aar-screenshot.png",
     },
     {
       id: "adguardhome",
       github: null,
       live: null,
-      title: "Instructions for setting up AdGuard Home on a Raspberry Pi",
+      title: "AdGuard Home | Raspberry Pi",
       tech: null,
       alt: "Screenshot of documentation.",
-      description: "",
+      description:
+        "Instructions for setting up AdGuard Home on a Raspberry Pi.",
       src: "rasbpi-screenshot.png",
     },
   ];
 
   return (
     <Layout>
-      <h3>Web development projects</h3>
+      <h3>Web development</h3>
       <section className={styles.portfolioContainer}>
         <ul className={styles.portfolioItems}>
           {projectLinks.map((project) => (
@@ -139,7 +140,7 @@ export default function Home() {
               className={styles.projectContainer}
               key={`${project.name} + ${project.id}`}
             >
-              <div className={styles.portfolioImageWrapper}>
+              <div className={styles.docsImageWrapper}>
                 <Image
                   fill
                   style={{ objectFit: "contain" }}
