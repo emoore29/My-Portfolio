@@ -53,28 +53,28 @@ export default function Home() {
         "A writeup documenting issues found with the CSS column-count property on various browsers and devices.",
       src: "column-count-screenshot.png",
     },
-    {
-      id: "redcrossreport",
-      github: null,
-      live: null,
-      title: "After Action Review: Red Cross (sample)",
-      tech: null,
-      alt: "Screenshot of report.",
-      description:
-        "An after action review written to support team development after a community incident.",
-      src: "aar-screenshot.png",
-    },
-    {
-      id: "adguardhome",
-      github: null,
-      live: null,
-      title: "AdGuard Home | Raspberry Pi",
-      tech: null,
-      alt: "Screenshot of documentation.",
-      description:
-        "Instructions for setting up AdGuard Home on a Raspberry Pi.",
-      src: "rasbpi-screenshot.png",
-    },
+    // {
+    //   id: "redcrossreport",
+    //   github: null,
+    //   live: null,
+    //   title: "After Action Review: Red Cross (sample)",
+    //   tech: null,
+    //   alt: "Screenshot of report.",
+    //   description:
+    //     "An after action review written to support team development after a community incident.",
+    //   src: "aar-screenshot.png",
+    // },
+    // {
+    //   id: "adguardhome",
+    //   github: null,
+    //   live: null,
+    //   title: "AdGuard Home | Raspberry Pi",
+    //   tech: null,
+    //   alt: "Screenshot of documentation.",
+    //   description:
+    //     "Instructions for setting up AdGuard Home on a Raspberry Pi.",
+    //   src: "rasbpi-screenshot.png",
+    // },
   ];
 
   return (
@@ -132,7 +132,7 @@ export default function Home() {
         </ul>
       </section>
       <section className={styles.portfolioContainer}>
-        <h3>Technical writing and documentation</h3>
+        <h3>Other</h3>
         <ul className={styles.portfolioItems}>
           {docsLinks.map((project) => (
             <li
