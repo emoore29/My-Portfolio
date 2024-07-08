@@ -7,10 +7,10 @@ export default function About() {
       <div className={styles.aboutContent}>
         <p>
           My name is Emma, and I live in Perth, Western Australia. I currently
-          work as a freelance document editor and writer, working on a range of
-          documents from legal transcripts to research manuscripts. I enjoy
-          learning about technology and have worked on a variety of web
-          development and home networking projects.
+          work as a document editor and writer, working on a range of documents
+          from legal transcripts to research manuscripts. I enjoy learning about
+          technology and have worked on a variety of web development and home
+          networking projects.
         </p>
 
         <p>
