@@ -15,14 +15,8 @@ export default function About() {
 
         <p>
           Outside of work and programming, I enjoy running, drawing, and
-          spending time with friends and family. I'm a big fan of{" "}
-          <a href="https://critrole.com/" target="_blank">
-            Critical Role
-          </a>{" "}
-          and emergent narrative in games. In 2019, I fostered a staffy named
-          Razzy who went on to find his forever home. I now have a cat named
-          Penny who adopted me and my partner and doesn't like it when I spend
-          too long at my PC.
+          spending time with friends and family. I love animals and between 2018
+          and 2019 I fostered six dogs. I currently have a cat named Penny.
         </p>
         <p>
           I designed and developed this website. The artwork you see on my
