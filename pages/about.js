@@ -8,11 +8,14 @@ export default function About() {
         <p>
           My name is Emma, and I live in Perth, Western Australia. I'm an
           experienced document editor, working on a range of documents from
-          legal transcripts to research manuscripts. In 2022, I became
-          interested in learning programming as a hobby, and after spending some
-          time creating various projects, I decided to take it seriously as a
-          career path. I'm currently completing a Graduate Diploma in
-          Information Technology, which I hope to complete by September 2024.
+          legal transcripts to research manuscripts.
+        </p>
+        <p>
+          In 2022, I became interested in learning programming as a hobby, and
+          after spending some time creating various projects, I decided to take
+          it seriously as a career path. I'm currently completing a Graduate
+          Diploma in Information Technology, which I hope to complete by
+          September 2024.
         </p>
         <p>
           Outside of work and programming, I enjoy running, drawing, and
