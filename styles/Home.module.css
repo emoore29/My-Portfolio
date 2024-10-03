@@ -40,7 +40,6 @@
   width: 100%;
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #3868371a;
 }
 
 /* 2-col */
@@ -103,21 +102,6 @@
   display: inline-block;
   width: 15px;
 }
-
-/* @media (min-width: 490px) {
-  .projectContainer {
-    flex-direction: row;
-  }
-
-  .portfolioImageWrapper {
-    margin: 0 0 1rem;
-  }
-
-  .projectInfo {
-    width: 65%;
-    padding: 0.2rem 1rem;
-  }
-} */
 
 /* BLOG STYLING */
 
