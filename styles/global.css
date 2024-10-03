@@ -35,14 +35,12 @@ ul {
 
 a {
   color: rgb(var(--green));
-  font-style: italic;
   text-decoration: none;
 }
 
 a:hover {
-  color: rgba(var(--purple));
   font-style: italic;
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 img {
