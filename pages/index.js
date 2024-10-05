@@ -28,16 +28,17 @@ export default function Home() {
         "An Australian artist's portfolio that includes client customisation with Sanity Studio.",
       src: "dpa.png",
     },
-    // {
-    //   id: "norspac",
-    //   github: null,
-    //   live: "https://norspac.com/",
-    //   title: "Norspac",
-    //   tech: "Gatsby, Shopify, Netlify",
-    //   alt: "Screenshot of art portfolio website.",
-    //   description: "Artist portfolio and store.",
-    //   src: "norspac.png",
-    // },
+    {
+      id: "pomodoro",
+      github: "https://github.com/emoore29/Pomodoro",
+      live: "https://emoore29.github.io/Pomodoro/",
+      title: "Minimalist Pomodoro",
+      tech: "React",
+      alt: "Screenshot of pomodoro website.",
+      description:
+        "An older project I built after learning React. A simple pomodoro timer with color and timer customisation.",
+      src: "pomodoro.png",
+    },
   ];
 
   return (
