@@ -6,9 +6,9 @@ export default function About() {
     <Layout>
       <div className={styles.aboutContent}>
         <p className={styles.aboutText}>
-          My name is Emma, and I live in Perth, Western Australia. I currently
-          work as a document editor in legal transcription. In 2022 I started
-          coding as a hobby, and I'm currently completing a Graduate Diploma in
+          Hi! I'm Emma, and I live in Perth, Western Australia. I currently work
+          as a document editor in legal transcription. In 2022 I started coding
+          as a hobby, and I'm currently completing a Graduate Diploma in
           Information Technology, which I'm aiming to complete by September
           2025.
         </p>

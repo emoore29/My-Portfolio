@@ -2,12 +2,14 @@
 import "../styles/global.css";
 import { Lora } from "next/font/google";
 import Script from "next/script";
+// import Stars from "../components/Stars";
 
 const lora = Lora({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      {/* <Stars /> */}
       <Component {...pageProps} />
       <Script
         strategy="lazyOnload"
