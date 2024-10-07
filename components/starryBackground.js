@@ -29,15 +29,26 @@ function biasedRandomInt(min, max) {
   // Generate a random number between 0 and 1
   let random = Math.random();
 
-  // Bias towards left (0-25%) and right (75-100%)
-  if (random < 0.4) {
-    // 40% chance to pick a value between 1% and 25% (left side)
-    return randomInt(min, max * 0.25);
-  } else if (random > 0.6) {
-    // 40% chance to pick a value between 75% and 100% (right side)
-    return randomInt(max * 0.75, max);
+  if (window.innerWidth <= 460) {
+    // Check for mobile screens
+    if (random < 0.5) {
+      // Push more stars to the left side (5%-20%)
+      return randomInt(min, max * 0.1);
+    } else {
+      // Push more stars to the right side (80%-95%)
+      return randomInt(max * 0.9, max);
+    }
   } else {
-    return randomInt(min, max);
+    // Bias towards left (0-25%) and right (75-100%)
+    if (random < 0.4) {
+      // 40% chance to pick a value between 1% and 25% (left side)
+      return randomInt(min, max * 0.25);
+    } else if (random > 0.6) {
+      // 40% chance to pick a value between 75% and 100% (right side)
+      return randomInt(max * 0.75, max);
+    } else {
+      return randomInt(min, max);
+    }
   }
 }
 
