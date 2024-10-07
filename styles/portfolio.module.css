@@ -78,8 +78,8 @@
 
 .projectsList {
   font-size: 16px;
-  margin-bottom: 40px;
-  list-style-position: inside;
+  margin-bottom: 60px;
+  padding-left: 15px;
 }
 
 .projectsList ul {
@@ -95,6 +95,6 @@
   font-weight: 600;
 }
 
-.projectLi {
-  margin-bottom: 5px;
+.projectsList > li {
+  margin-bottom: 20px;
 }

@@ -10,9 +10,9 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  padding: 4rem;
+  padding: 2rem;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 950px;
   /* background-color: var(--background); */
 }
 
