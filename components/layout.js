@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/layout.module.css";
-import Footer from "./Footer";
-import Navigation from "./Navigation";
+import Footer from "./footer";
+import Navigation from "./navigation";
 
 export const siteTitle = "Emma Moore";
 
