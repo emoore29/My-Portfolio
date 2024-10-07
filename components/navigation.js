@@ -16,7 +16,7 @@ export default function Navigation() {
         <li>
           <Link
             href="/about"
-            className={pathName == "/About" ? `${styles.activeLink}` : ""}
+            className={pathName == "/about" ? `${styles.activeLink}` : ""}
           >
             about
           </Link>
