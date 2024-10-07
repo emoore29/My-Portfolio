@@ -64,3 +64,19 @@
   max-width: 30%;
   margin-left: auto;
 }
+
+.illustration {
+  max-width: 300px;
+  align-self: center;
+  margin: 0;
+}
+
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.caption {
+  font-size: x-small;
+  text-align: center;
+}

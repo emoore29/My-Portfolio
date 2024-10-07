@@ -77,18 +77,6 @@ export default function Home() {
       <h4>Other</h4>
       <ul className={styles.projectsList}>
         <li className={styles.projectLi}>
-          <span>Norspac:</span> An e-commerce artist portfolio built with
-          another developer.
-          <ul>
-            <li>Built with Gatsby, React Context, and Shopify.</li>
-            <li>
-              <Link href="https://norspac.com/" target="_blank">
-                View live
-              </Link>
-            </li>
-          </ul>
-        </li>
-        <li className={styles.projectLi}>
           <span>Coding Puzzles:</span> My solutions to various coding problems.
           <ul>
             <li>
