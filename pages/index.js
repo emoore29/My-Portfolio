@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import LinkArrowIcon from "../components/icons/LinkArrowIcon";
-import Layout from "../components/Layout";
+import Layout from "../components/layout";
 import styles from "../styles/portfolio.module.css";
 
 export default function Home() {
