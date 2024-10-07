@@ -1,5 +1,5 @@
 import styles from "../styles/layout.module.css";
-import GitHubIcon from "./icons/GitHubIcon";
+import GitHubIcon from "./icons/gitHubIcon";
 import Image from "next/image";
 
 export default function Footer() {
