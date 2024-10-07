@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Trykker&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
+/* Handles styling for the Layout component */
+
 /* Container wrapping header, main, and footer */
 .container {
   min-height: 100vh;

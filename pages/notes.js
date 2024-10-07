@@ -1,13 +1,13 @@
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
-import Date from "../components/date";
-import Layout, { siteTitle } from "../components/layout";
-import styles from "../styles/Home.module.css";
-import Head from "next/head";
+import Date from "../components/Date";
+import Layout from "../components/Layout";
+import { getSortedPostsData } from "../lib/posts";
+import styles from "../styles/notes.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 // Exporting getStaticProps causes Next.js to pre-render the page at build time using the props returned by getStaticProps
 export async function getStaticProps() {
+  // Gets all notes sorted for display in Notes component
   const allPostsData = getSortedPostsData();
   return {
     props: {
@@ -16,6 +16,7 @@ export async function getStaticProps() {
   };
 }
 
+// Displays all the notes
 export default function Notes({ allPostsData }) {
   return (
     <Layout>
@@ -40,11 +41,11 @@ export default function Notes({ allPostsData }) {
       <div className={styles.flexCol}>
         <figure className={styles.illustration}>
           <img
-            src="/images/transhumans.png"
-            alt="A boy and a girl sharing ideas."
+            src="/images/transhumans-tech.png"
+            alt="Artwork of a boy and a girl sharing ideas."
           />
           <figcaption className={styles.caption}>
-            <a href="https://www.transhumans.xyz/about">By Pablo Stanley</a>
+            <a href="https://www.transhumans.xyz/about">Transhumans</a>
           </figcaption>
         </figure>
       </div>

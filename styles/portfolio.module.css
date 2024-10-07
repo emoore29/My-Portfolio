@@ -1,0 +1,77 @@
+/* PORTFOLIO SECTION */
+
+.portfolioContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* 2-col */
+@media (min-width: 490px) {
+  .project {
+    width: 48%;
+  }
+}
+
+/* 3-col */
+@media (min-width: 768px) {
+  .project {
+    width: 32%;
+  }
+}
+
+.portfolioImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin: 0 auto 1rem;
+}
+
+.projectDescription {
+  font-size: 16px;
+  color: var(--text-main);
+  margin-bottom: 2rem;
+}
+
+.projectTech {
+  padding: 0 0 1rem;
+}
+
+.projectName {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.projectTech {
+  color: var(--secondary);
+  font-size: 16px;
+  font-style: italic;
+}
+
+.projectLinks {
+  font-size: 16px;
+}
+
+.projectInfo {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  width: 100%;
+  padding: 0.2rem 0;
+}
+
+.linkIcon {
+  display: inline-block;
+  width: 15px;
+}

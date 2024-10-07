@@ -1,5 +1,5 @@
-import Layout from "../components/layout";
-import styles from "../styles/Home.module.css";
+import Layout from "../components/Layout";
+import styles from "../styles/About.module.css";
 
 export default function About() {
   return (
@@ -14,7 +14,7 @@ export default function About() {
         </p>
         <figure className={styles.illustration}>
           <img
-            src="/images/puppy-transhumans.png"
+            src="/images/transhumans-puppy.png"
             alt="Drawing of a girl cuddling a puppy."
           />
           <figcaption className={styles.caption}>

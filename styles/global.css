@@ -9,57 +9,14 @@
   --purple: 159, 74, 165;
 }
 
-/* .star {
-  z-index: -1;
-  width: 11px;
-  height: 11px;
-  display: inline-block;
-  position: absolute;
-  fill: #ffffff;
-  animation-name: float, fade;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
-}
-
-.star:nth-child(3n + 3) {
-  fill: #fec777;
-}
-
-.star:nth-child(5n + 5) {
-  fill: #498fb3;
-} */
-
-/* @keyframes float {
-  0% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-10px, 10px) scale(1.2);
-  }
-  100% {
-    transform: translate(10px, -10px) scale(1);
-  }
-}
-
-@keyframes fade {
-  0%,
-  100% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-} */
-
 html,
 body {
   padding: 0;
   margin: 0;
   color: var(--primary);
   font-size: 18px;
-  /* background-color: #fefefe;
-  background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23386837' fill-opacity='0.15'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); */
 }
+
 * {
   box-sizing: border-box;
 }
@@ -105,3 +62,46 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+
+/* Star background */
+/* .star {
+  z-index: -1;
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  position: absolute;
+  fill: #ffffff;
+  animation-name: float, fade;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+}
+
+.star:nth-child(3n + 3) {
+  fill: #fec777;
+}
+
+.star:nth-child(5n + 5) {
+  fill: #498fb3;
+} */
+
+/* @keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(-10px, 10px) scale(1.2);
+  }
+  100% {
+    transform: translate(10px, -10px) scale(1);
+  }
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+} */

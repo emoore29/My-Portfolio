@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import LinkIcon from "../components/icons/LinkIcon";
-import Layout from "../components/layout";
-import styles from "../styles/Home.module.css";
+import LinkArrowIcon from "../components/icons/LinkArrowIcon";
+import Layout from "../components/Layout";
+import styles from "../styles/portfolio.module.css";
 
 export default function Home() {
   const projectLinks = [
@@ -37,7 +37,7 @@ export default function Home() {
       alt: "Screenshot of pomodoro website.",
       description:
         "An older project I built after learning React. A simple pomodoro timer with color and timer customisation.",
-      src: "pomodoro.png",
+      src: "pomodoro.jpg",
     },
   ];
 
@@ -69,7 +69,7 @@ export default function Home() {
                       <Link href={project.github} target="_blank">
                         View on Github{" "}
                         <div className={styles.linkIcon}>
-                          <LinkIcon />
+                          <LinkArrowIcon />
                         </div>
                       </Link>
                     </li>
@@ -79,7 +79,7 @@ export default function Home() {
                       <Link href={project.live} target="_blank">
                         View live{" "}
                         <div className={styles.linkIcon}>
-                          <LinkIcon />
+                          <LinkArrowIcon />
                         </div>
                       </Link>
                     </li>

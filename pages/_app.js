@@ -1,21 +1,18 @@
 // pages/_app.js
 import "../styles/global.css";
-import { Lora } from "next/font/google";
 import Script from "next/script";
 // import Stars from "../components/Stars";
-
-const lora = Lora({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Stars /> */}
+      {/* <Stars /> -- Stars background (experimenting with design) */}
       <Component {...pageProps} />
+      {/* Google Analytics */}
       <Script
         strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
       />
-
       <Script strategy="lazyOnload">
         {`
                     window.dataLayer = window.dataLayer || [];

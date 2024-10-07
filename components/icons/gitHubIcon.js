@@ -1,6 +1,6 @@
 import utilStyles from "../../styles/utils.module.css";
 
-export default function GhIcon() {
+export default function GitHubIcon() {
   return (
     <div className={utilStyles.socialSvgContainers}>
       <svg

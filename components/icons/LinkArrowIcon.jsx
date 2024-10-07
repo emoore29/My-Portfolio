@@ -1,4 +1,6 @@
-export default function LinkIcon() {
+// Arrow icon to place next to links to indicate the link will open a new tab
+
+export default function LinkArrowIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

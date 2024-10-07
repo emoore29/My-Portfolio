@@ -1,13 +1,14 @@
-import Layout from "../../components/layout";
 import Link from "next/link";
+import Date from "../../components/Date";
+import Layout from "../../components/Layout";
 import { getAllPostIds, getPostData } from "../../lib/posts";
-import Head from "next/head";
-import Date from "../../components/date";
+import styles from "../../styles/notes.module.css";
 import utilStyles from "../../styles/utils.module.css";
-import styles from "../../styles/Home.module.css";
-import { lora } from "../../styles/fonts";
 
+// Gets post data for the current url slug (a post id)
+// params contains the id (because this file name is [id], a dynamic route)
 export async function getStaticProps({ params }) {
+  // Retrieve and return post data
   const postData = await getPostData(params.id);
   return {
     props: {
@@ -16,6 +17,10 @@ export async function getStaticProps({ params }) {
   };
 }
 
+// Returns an array of possible values for id
+// Note: I am not sure I understand why this function is needed here, but it is
+// See https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-paths
+// It seems to be required by the framework when a page is using dynamic routes and getStaticProps
 export async function getStaticPaths() {
   const paths = getAllPostIds();
   return {
@@ -24,6 +29,7 @@ export async function getStaticPaths() {
   };
 }
 
+// Post component handles display of postData once it has been retrieved from getStaticProps
 export default function Post({ postData }) {
   return (
     <Layout>
