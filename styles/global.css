@@ -67,27 +67,26 @@ hr {
 }
 
 /* Star background */
-/* .star {
+.star {
   z-index: -1;
-  width: 11px;
-  height: 11px;
+  width: 8px;
+  height: 8px;
   display: inline-block;
   position: absolute;
   fill: #ffffff;
-  animation-name: float, fade;
   animation-timing-function: ease-in-out;
-  animation-iteration-count: 1;
+  animation-iteration-count: infinite;
 }
 
 .star:nth-child(3n + 3) {
-  fill: #fec777;
+  fill: #b93673;
 }
 
 .star:nth-child(5n + 5) {
-  fill: #498fb3;
-} */
+  fill: #3d47b2;
+}
 
-/* @keyframes float {
+@keyframes float1 {
   0% {
     transform: translate(0, 0) scale(1);
   }
@@ -95,16 +94,46 @@ hr {
     transform: translate(-10px, 10px) scale(1.2);
   }
   100% {
-    transform: translate(10px, -10px) scale(1);
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(10px, -10px) scale(1.2);
+  }
+  75% {
+    transform: translate(5px, 5px) scale(1.1);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(-6px, -10px) scale(1.1);
+  }
+  50% {
+    transform: translate(-2px, 4px) scale(1.2);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
   }
 }
 
 @keyframes fade {
   0%,
   100% {
-    opacity: 0;
-  }
-  50% {
     opacity: 1;
   }
-} */
+  50% {
+    opacity: 0;
+  }
+}
