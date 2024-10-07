@@ -75,3 +75,26 @@
   display: inline-block;
   width: 15px;
 }
+
+.projectsList {
+  font-size: 16px;
+  margin-bottom: 40px;
+  list-style-position: inside;
+}
+
+.projectsList ul {
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.projectsList > ul {
+  list-style-type: disc;
+}
+
+.projectsList span {
+  font-weight: 600;
+}
+
+.projectLi {
+  margin-bottom: 5px;
+}

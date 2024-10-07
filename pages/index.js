@@ -43,7 +43,104 @@ export default function Home() {
 
   return (
     <Layout>
-      <ul className={styles.portfolioContainer}>
+      <h4>Web dev</h4>
+      <ul className={styles.projectsList}>
+        <li className={styles.projectLi}>
+          <span>Donna Price Art:</span> An Australian artist's portfolio.
+          <ul>
+            <li>Built with Next.js and Sanity, deployed with Vercel</li>
+            <li>
+              <Link href="https://donnapriceart.com/" target="_blank">
+                View live
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span>Contrast Calculator:</span> A tool to assist developers in
+          creating colour palettes with accessible contrasts.
+          <ul>
+            <li>Built with Next.js and TypeScript, deployed with Vercel</li>
+            <li>
+              <Link href="https://acpd.vercel.app/" target="_blank">
+                View live
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/emoore29/acpd" target="_blank">
+                View GitHub repository
+              </Link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <h4>Other</h4>
+      <ul className={styles.projectsList}>
+        <li className={styles.projectLi}>
+          <span>Norspac:</span> An e-commerce artist portfolio built with
+          another developer.
+          <ul>
+            <li>Built with Gatsby, React Context, and Shopify.</li>
+            <li>
+              <Link href="https://norspac.com/" target="_blank">
+                View live
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li className={styles.projectLi}>
+          <span>Coding Puzzles:</span> My solutions to various coding problems.
+          <ul>
+            <li>
+              <Link
+                href="https://github.com/emoore29/coding-puzzles"
+                target="_blank"
+              >
+                View on GitHub
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li className={styles.projectLi}>
+          <span>React Context Playground:</span> Built to understand and demo
+          React Context.
+          <ul>
+            <li>
+              <Link
+                href="https://emoore29.github.io/react-context-playground/"
+                target="_blank"
+              >
+                View live
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://github.com/emoore29/react-context-playground"
+                target="_blank"
+              >
+                View on GitHub
+              </Link>
+            </li>
+          </ul>
+        </li>
+        <li className={styles.projectLi}>
+          <span>Pomodoro:</span> An older project built with React.
+          <ul>
+            <li>
+              <Link href="https://emoore29.github.io/pomodoro/" target="_blank">
+                View live
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/emoore29/pomodoro" target="_blank">
+                View on GitHub
+              </Link>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      {/* <ul className={styles.portfolioContainer}>
         {projectLinks.map((project) => (
           <li
             id={project.id}
@@ -89,7 +186,7 @@ export default function Home() {
             </div>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </Layout>
   );
 }

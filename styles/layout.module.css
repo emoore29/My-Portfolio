@@ -62,6 +62,10 @@
   font-size: medium;
 }
 
+.navList ul {
+  list-style-type: none;
+}
+
 @media (min-width: 768px) {
   .navList {
     gap: 2rem;
