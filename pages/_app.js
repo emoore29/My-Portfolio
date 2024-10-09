@@ -7,9 +7,9 @@ import LeafBackground from "../components/leafBackground";
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* -- Stars background (experimenting with design) */}
+      {/* -- Optional backgrounds */}
       {/* <StarryBackground /> */}
-      <LeafBackground />
+      {/* <LeafBackground /> */}
       <Component {...pageProps} />
       {/* Google Analytics */}
       <Script
