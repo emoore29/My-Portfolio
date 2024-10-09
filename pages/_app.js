@@ -1,13 +1,13 @@
 // pages/_app.js
 import "../styles/global.css";
 import Script from "next/script";
-import StarryBackground from "../components/starryBackground";
+// import StarryBackground from "../components/starryBackground";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
       {/* -- Stars background (experimenting with design) */}
-      <StarryBackground />
+      {/* <StarryBackground /> */}
       <Component {...pageProps} />
       {/* Google Analytics */}
       <Script
