@@ -1,0 +1,31 @@
+@media (min-width: 1440px) {
+  .leftLeaves {
+    position: fixed;
+    left: 5%;
+    bottom: 0;
+  }
+
+  .rightLeaves {
+    position: fixed;
+    right: 5%;
+    bottom: 0;
+    /* transform: scaleX(-1); */
+  }
+}
+
+@media (max-width: 1440px) {
+  .leftLeaves {
+    display: none;
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+  }
+
+  .rightLeaves {
+    display: none;
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    transform: scaleX(-1);
+  }
+}
